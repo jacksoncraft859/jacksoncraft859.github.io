@@ -1784,6 +1784,9 @@ class ScratchGamepad {
 }
 
 (function() {
+    var extensionInstance = new ScratchGamepad(window.vm.extensionManager.runtime)
+    var serviceName = window.vm.extensionManager._registerInternalExtension(extensionInstance)
+    window.vm.extensionManager._loadedExtensions.set(extensionInstance.getInfo().id, serviceName)
     var extensionClass = RaspberryJamMod
     if (typeof window === "undefined" || !window.vm) {
         Scratch.extensions.register(new extensionClass())
@@ -1792,9 +1795,6 @@ class ScratchGamepad {
         var extensionInstance = new extensionClass(window.vm.extensionManager.runtime)
         var serviceName = window.vm.extensionManager._registerInternalExtension(extensionInstance)
         window.vm.extensionManager._loadedExtensions.set(extensionInstance.getInfo().id, serviceName)
-        var extensionInstance2 = new ScratchGamepad(window.vm.extensionManager.runtime)
-        var serviceName = window.vm.extensionManager._registerInternalExtension(extensionInstance2)
-        window.vm.extensionManager._loadedExtensions.set(extensionInstance2.getInfo().id, serviceName)
     }
 })()
 
