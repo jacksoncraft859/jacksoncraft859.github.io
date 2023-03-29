@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>L BOZO, Get IP logged</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <style>
+      body {
+        background-color: black;
+        font-family: Arial, sans-serif;
+        color: #333;
+      }
+      h1 {
+        color: white;
+        text-align: left;
+        margin: 20px 0;
+      }
+      h2 {
+        color: white;
+        text-align: left;
+        margin: 20px 0;
+      }
+      p {
+        font-size: 18px;
+        line-height: 1.5;
+        margin: 20px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="topnav">
+  <a href="index.html">Home</a>
+  <a href="https://project-pypc.github.io/index.html">PyPc</a>
+  <a href="https://project-pypc.github.io/op.html">Other Projects</a>
+  <a href="https://ultrixos.github.io"><b style="color:dodgerblue;">Ultrix OS</b>
+  <a href="https://github.com/jacksoncraft859/">Github</a>
+    <a class="active" href="log.html">IP LOG</a>
+  <a href="about.html">About</a>
+</div>
+    <h1>L BOZO, Get IP logged</h1>
+    <h2>Info:</h2>
+    <pre><code style="word-wrap: break-word;overflow-wrap: break-word;white-space: pre-wrap;font-size: 16px;background-color: #e7ecf0;">Loading...</code></pre>
+    <script>
+      let echolog = {};
+      // here is the fun
+      fetch("https://wtfismyip.com/json")
+        .then((response) => response.json())
+        .then((data) => {
+          let echolog = {
+            ipAddress: data.YourFuckingIPAddress,
+            location: data.YourFuckingLocation,
+            hostname: data.YourFuckingHostname,
+            isp: data.YourFuckingISP,
+            city: data.YourFuckingCity,
+            country: data.YourFuckingCountry,
+            countryCode: data.YourFuckingCountryCode,
+            userAgent: navigator.userAgent,
+            windowProp: Object.keys(window).length,
+            windowWidth: window.innerWidth,
+            windowHeight: window.innerHeight,
+            windowRatio: window.innerWidth / window.innerHeight,
+            screenWidth: window.screen.availWidth,
+            screenHeight: window.screen.availHeight,
+            screenRatio: window.screen.availWidth / window.screen.availHeight,
+            DPI: window.devicePixelRatio,
+            colorDepth: window.screen.colorDepth,
+            orientation: window.screen.orientation.type,
+            orientationAngle: window.screen.orientation.angle,
+            os: navigator.platform,
+            threads: navigator.hardwareConcurrency,
+            memory: navigator.deviceMemory,
+            systemLanguages: navigator.languages.join(", "),
+            languages: navigator.language,
+          };
+
+          var codeBlock = document.querySelector("code");
+          codeBlock.innerText = JSON.stringify(echolog, null, 1);
+          hljs.highlightAll();
+        })
+        .catch((error) => console.error(error));
+    </script>
+  </body>
+</html>
