@@ -3885,7 +3885,7 @@ add_mark("JS Shell", 'javascript:(function(){pipejs = document.createElement("sc
 add_mark("DOM Editor", 'javascript:(function(){domeditjs = document.createElement("script");domeditjs.src="https://chezmarklets.chezcoder.repl.co/wip/DOMEditor.js";document.body.appendChild(domeditjs)}())');
 add_label("Blooket");
 add_mark("Hacks", 'javascript:(function(){bguijs = document.createElement("script");bguijs.src="https://jacksoncraft859.github.io/gui.js";document.body.appendChild(bguijs)}())');
-add_mark("Hacks2", Hacks)
+add_mark("Hacks2", Hacks);
 add_label("Useful");
 add_mark("Tiny URL", "javascript:void(open('http://tinyurl.com/create.php?url='+encodeURIComponent(location.href)))");
 add_mark("QR Code", "javascript:(function(){if(document.getElementById){var x=document.body;var o=document.createElement('script');if(typeof(o)!='object') o=document.standardCreateElement('script');o.setAttribute('src','http://qrbookmarklet.googlecode.com/svn/trunk/qr.js');o.setAttribute('type','text/javascript');x.appendChild(o);}})();");
@@ -3893,7 +3893,7 @@ add_mark("Web Archive", "javascript:(function(){window.location='http://web.arch
 add_mark("Image Search" , "javascript:void((function(){var sir=document.createElement('script');sir.setAttribute('src','http://cdnjs.cloudflare.com/ajax/libs/require.js/0.26.0/require.min.js');sir.setAttribute('type','text/javascript');document.getElementsByTagName('head')[0].appendChild(sir);var sib=document.createElement('script');sib.setAttribute('src','http://jarred.github.com/src-img/js/app/bookmarklet.js?version=0.66');sib.setAttribute('type','text/javascript');document.getElementsByTagName('head')[0].appendChild(sib);})());") ;
 //add_mark("Show All Links", "#",  showAllLinks)
 //add_mark("Show All Links", "javascript:" + showAllLinks.toString())
-add_mark("Show All Links", showAllLinks)
+add_mark("Show All Links", showAllLinks);
 add_mark("Share", "javascript: void((function(svc) {     var d = document,         w = window,         p = 0,         b = function() {             if (!p) {                 p = 1;                 if (_atc.xol) _adr.onReady();                 if (w.addthis_sendto) addthis_sendto(svc || 'bkmore', {                     product: 'bmt-' + _atc.ver                 })             } else {                 p = 0;                 if (_atw) _atw.clb()             }         };     if (!w._atc) {         var ol = w.addthis_onload || [],             o = d.createElement('script');         w.addthis_product = 'bmt-250';         o.src = '//s7.addthis.com/js/250/addthis_widget.js#domready=1&username=bookmarklet';%20%20%20%20%20%20%20%20%20ol.push(b);%20%20%20%20%20%20%20%20%20w.addthis_onload%20=%20ol;%20%20%20%20%20%20%20%20%20d.getElementsByTagName('body')[0].appendChild(o)%20%20%20%20%20}%20else%20b()%20})())");
 //==================
 add_label("Web Dev");
