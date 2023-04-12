@@ -3854,7 +3854,7 @@ panelbar.innerHTML = "JS PANEL" ;
 
 // panelbar.style.position = "fixed"
 panelbar.style.height = "20px";
-panelbar.style["background-color"] = "yellow";
+panelbar.style["background-color"] = "orange";
 panelbar.style["z-index"] = 10e5;
 panelbar.onclick = hide_panel ;
 
@@ -3866,7 +3866,8 @@ panel.style.position = "fixed";
 panel.style.width = "150px";
 //panel.style.height = "500px";
 panel.style.top = "0px";
-panel.style["background-color"] = "lightblue";
+panel.style["color"] = "white";
+panel.style["background-color"] = "black";
 
 
 panel.appendChild(panelbar);
