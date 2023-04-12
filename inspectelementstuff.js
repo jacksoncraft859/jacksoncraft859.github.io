@@ -176,6 +176,8 @@ add_label("Inspect Element");
 add_mark("eInfo", 'javascript:(function(){einfojs = document.createElement("script");einfojs.src="https://chezmarklets--chezcoder.repl.co/wip/einfo.js";document.body.appendChild(einfojs)}())');
 add_mark("JS Shell", 'javascript:(function(){pipejs = document.createElement("script");pipejs.src="https://chezmarklets--chezcoder.repl.co/scripts/pipe.js";document.body.appendChild(pipejs)}())');
 add_mark("DOM Editor", 'javascript:(function(){domeditjs = document.createElement("script");domeditjs.src="https://chezmarklets.chezcoder.repl.co/wip/DOMEditor.js";document.body.appendChild(domeditjs)}())');
+add_label("Blooket");
+add_mark("Hacks", 'javascript:(function(){bguijs = document.createElement("script");bguijs.src="https://jacksoncraft859.github.io/gui.js";document.body.appendChild(bguijs)}())');
 add_label("Useful");
 add_mark("Tiny URL", "javascript:void(open('http://tinyurl.com/create.php?url='+encodeURIComponent(location.href)))");
 add_mark("QR Code", "javascript:(function(){if(document.getElementById){var x=document.body;var o=document.createElement('script');if(typeof(o)!='object') o=document.standardCreateElement('script');o.setAttribute('src','http://qrbookmarklet.googlecode.com/svn/trunk/qr.js');o.setAttribute('type','text/javascript');x.appendChild(o);}})();");
@@ -184,10 +186,13 @@ add_mark("Image Search" , "javascript:void((function(){var sir=document.createEl
 //add_mark("Show All Links", "#",  showAllLinks)
 //add_mark("Show All Links", "javascript:" + showAllLinks.toString())
 add_mark("Show All Links", showAllLinks)
+add_mark("Share", "javascript: void((function(svc) {     var d = document,         w = window,         p = 0,         b = function() {             if (!p) {                 p = 1;                 if (_atc.xol) _adr.onReady();                 if (w.addthis_sendto) addthis_sendto(svc || 'bkmore', {                     product: 'bmt-' + _atc.ver                 })             } else {                 p = 0;                 if (_atw) _atw.clb()             }         };     if (!w._atc) {         var ol = w.addthis_onload || [],             o = d.createElement('script');         w.addthis_product = 'bmt-250';         o.src = '//s7.addthis.com/js/250/addthis_widget.js#domready=1&username=bookmarklet';%20%20%20%20%20%20%20%20%20ol.push(b);%20%20%20%20%20%20%20%20%20w.addthis_onload%20=%20ol;%20%20%20%20%20%20%20%20%20d.getElementsByTagName('body')[0].appendChild(o)%20%20%20%20%20}%20else%20b()%20})())");
 //==================
 add_label("Web Dev");
 add_mark("Inject JQuery", "javascript:void(function(){document.body.appendChild(document.createElement('script')).src='http://code.jquery.com/jquery-1.7.2.min.js' })();");
-add_mark("Close", remove_panel)
+add_label("Proxy");
+add_mark("Interstellar", "https://gointerstellar.app/");
+add_mark("Close", remove_panel);
 
 
 subpanel.appendChild(UL);
