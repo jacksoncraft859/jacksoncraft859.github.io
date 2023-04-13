@@ -144,22 +144,16 @@ panelbar = create_tag("div")
 
 //panelbar.innerHTML = "<a href='#' onclick='hide_panel()' id='panel_switch' >Hide Panel<a>"
 panelbar.innerHTML = "JS PANEL" ;
-
 // panelbar.style.position = "fixed"
-panelbar.style.height = "20px";
-panelbar.style["background-color"] = "orange";
-panelbar.style["z-index"] = 10e5;
-panelbar.onclick = hide_panel ;
+panelbar.style"height:20px;background-color:orange;z-index:10e5";
+panelbar.onclick = hide_panel;
 
 subpanel = create_tag("div")
 
 
 panel.id = "InjectorPanel";
-panel.style.position = "fixed";
-panel.style.width = "150px";
 //panel.style.height = "500px";
-panel.style.top = "0px";
-panel.style="color:white;background-color:black;";
+panel.style="color:white;background-color:black;width:150px;position:fixed;top:0px;";
 
 
 
