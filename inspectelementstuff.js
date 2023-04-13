@@ -159,6 +159,7 @@ panel.style.position = "fixed";
 panel.style.width = "150px";
 //panel.style.height = "500px";
 panel.style.top = "0px";
+panel.style["color"] = "white";
 panel.style["background-color"] = "black";
 
 
