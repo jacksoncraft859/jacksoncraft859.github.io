@@ -82,7 +82,7 @@ function fullUrls() {
     };
     panel.remove();
  
-}
+};
 
 
 /* Credits: http://www.xinotes.net/notes/note/219/ */
