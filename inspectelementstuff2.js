@@ -188,7 +188,7 @@ subpan2 = create_tag("div")
 
 panel.id = "InjectorPanel";
 panel.style.position = "fixed";
-panel.style.width = "250px";
+panel.style.width = "150px";
 //panel.style.height = "500px";
 panel.style.top = "0px";
 panel.style["background-color"] = "black";
@@ -200,6 +200,7 @@ panel.appendChild(subpanel);
 panel.appendChild(subpan2);
 
 document.querySelector("body").appendChild(panel);
+panel.addEventListener("load", hide_subpanel);
 
  
 // Serch Web Archive
