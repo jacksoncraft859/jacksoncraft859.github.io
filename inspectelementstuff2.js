@@ -200,7 +200,6 @@ panel.appendChild(subpanel);
 panel.appendChild(subpan2);
 
 document.querySelector("body").appendChild(panel);
-panel.addEventListener("load", hide_subpanel);
 
  
 // Serch Web Archive
