@@ -139,15 +139,21 @@ function hide_panel(){
 };
 
 panel = create_tag("div")
+
 panelbar = create_tag("div")
+
 //panelbar.innerHTML = "<a href='#' onclick='hide_panel()' id='panel_switch' >Hide Panel<a>"
 panelbar.innerHTML = "JS PANEL" ;
+
 // panelbar.style.position = "fixed"
 panelbar.style.height = "20px";
 panelbar.style["background-color"] = "orange";
 panelbar.style["z-index"] = 10e5;
 panelbar.onclick = hide_panel ;
+
 subpanel = create_tag("div")
+
+
 panel.id = "InjectorPanel";
 panel.style.position = "fixed";
 panel.style.width = "150px";
@@ -155,8 +161,11 @@ panel.style.width = "150px";
 panel.style.top = "0px";
 panel.style["background-color"] = "black";
 panel.style["color"] = "white";
+
+
 panel.appendChild(panelbar);
 panel.appendChild(subpanel);
+
 document.querySelector("body").appendChild(panel);
 
  
