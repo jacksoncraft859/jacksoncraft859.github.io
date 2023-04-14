@@ -198,6 +198,7 @@ panel.style["color"] = "white";
 panel.appendChild(panelbar);
 panel.appendChild(subpanel);
 panel.appendChild(subpan2);
+panel.onload = hide_subpanel ;
 
 document.querySelector("body").appendChild(panel);
 
