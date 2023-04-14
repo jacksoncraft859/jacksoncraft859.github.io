@@ -249,6 +249,5 @@ add_label("Proxy");
 add_mark("Interstellar", "https://gointerstellar.app/");
 add_mark("Close", remove_panel);
 
-
 subpanel.appendChild(UL);
 subpan2.appendChild(UL2);
