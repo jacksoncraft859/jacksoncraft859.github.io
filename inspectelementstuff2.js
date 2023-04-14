@@ -188,7 +188,7 @@ subpan2 = create_tag("div")
 
 panel.id = "InjectorPanel";
 panel.style.position = "fixed";
-panel.style.width = "150px";
+panel.style.width = "250px";
 //panel.style.height = "500px";
 panel.style.top = "0px";
 panel.style["background-color"] = "black";
