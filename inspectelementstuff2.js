@@ -232,7 +232,6 @@ panel.appendChild(panelbar);
 panel.appendChild(subpanel);
 panel.appendChild(subpan2);
 panel.appendChild(subpan3);
-panel.onload = hide_subpanel ;
 
 document.querySelector("body").appendChild(panel);
 
