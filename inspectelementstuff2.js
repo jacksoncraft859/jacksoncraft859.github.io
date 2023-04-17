@@ -36,6 +36,10 @@ UL2 = create_tag("ul");
 UL2.className = "bookmarklets" ;
 UL2.style="list-style-type:disc";
 
+UL3 = create_tag("ul");
+UL3.className = "bookmarklets" ;
+UL3.style="list-style-type:disc";
+
 function add_mark(label, url, onclick){
   var il = create_tag("il");
   var a = hyperlink(label, url, onclick);
@@ -56,6 +60,16 @@ function add_submark(label, url, onclick){
   
 };
 
+function add_submark2(label, url, onclick){
+  var il = create_tag("il");
+  var a = hyperlink(label, url, onclick);
+  
+  a.style.display = "block" ;
+  il.appendChild(a) ;
+  UL3.appendChild(il);
+  
+};
+
 function add_label(label){
   var il = create_tag("il");
   var t = create_text(label);
@@ -71,6 +85,15 @@ function add_sublabel(label){
   // t.style.display = "block" ;
   il.appendChild(t) ;
   UL2.appendChild(il);
+  
+};
+
+function add_sublabel2(label){
+  var il = create_tag("il");
+  var t = create_text(label);
+  // t.style.display = "block" ;
+  il.appendChild(t) ;
+  UL3.appendChild(il);
   
 };
 
@@ -169,6 +192,14 @@ function hide_subpanel(){
     }
 };
 
+function hide_subpanel2(){
+    if (subpan3.hidden == false){
+        subpan3.hidden = true;
+    }else{
+        subpan3.hidden = false;
+    }
+};
+
 panel = create_tag("div")
 
 panelbar = create_tag("div")
@@ -185,6 +216,8 @@ panelbar.onclick = hide_panel ;
 subpanel = create_tag("div")
 
 subpan2 = create_tag("div")
+
+subpan3 = create_tag("div")
 
 panel.id = "InjectorPanel";
 panel.style.position = "fixed";
@@ -233,15 +266,16 @@ add_mark("Show All Links", showAllLinks);
 add_mark("Share", "javascript: void((function(svc) {     var d = document,         w = window,         p = 0,         b = function() {             if (!p) {                 p = 1;                 if (_atc.xol) _adr.onReady();                 if (w.addthis_sendto) addthis_sendto(svc || 'bkmore', {                     product: 'bmt-' + _atc.ver                 })             } else {                 p = 0;                 if (_atw) _atw.clb()             }         };     if (!w._atc) {         var ol = w.addthis_onload || [],             o = d.createElement('script');         w.addthis_product = 'bmt-250';         o.src = '//s7.addthis.com/js/250/addthis_widget.js#domready=1&username=bookmarklet';%20%20%20%20%20%20%20%20%20ol.push(b);%20%20%20%20%20%20%20%20%20w.addthis_onload%20=%20ol;%20%20%20%20%20%20%20%20%20d.getElementsByTagName('body')[0].appendChild(o)%20%20%20%20%20}%20else%20b()%20})())");
 //==================
 add_label("Web Dev");
-add_mark("FPS", "javascript:(function(){var script=document.createElement('script');script.onload=function(){var stats=new Stats();document.body.appendChild(stats.dom);requestAnimationFrame(function loop(){stats.update();requestAnimationFrame(loop)});};script.src='https://mrdoob.github.io/stats.js/build/stats.min.js';document.head.appendChild(script);})()");
-add_mark("Github Search", 'javascript:var query = prompt("Search GitHub.com");user_search_ary = /%5Eu:(.*)/g.exec(query);if (user_search_ary) %7Bwindow.location = "https://github.com/" + user_search_ary%5B1%5D;%7Delse if (query) %7Bwindow.location = "https://github.com/search?q=" + query;%7D');
-add_mark("Inject JQuery", "javascript:void(function(){document.body.appendChild(document.createElement('script')).src='http://code.jquery.com/jquery-1.7.2.min.js' })();");
-add_mark("Web Stack", "javascript: (function() { var d = document, e = d.getElementById('wappalyzer-container'); if (e !== null) { d.body.removeChild(e); } var u = 'https://www.wappalyzer.com/', t = new Date().getTime(), c = d.createElement('div'), p = d.createElement('div'), l = d.createElement('link'), s = d.createElement('script'); c.setAttribute('id', 'wappalyzer-container'); l.setAttribute('rel', 'stylesheet'); l.setAttribute('href', u + 'css/bookmarklet.css'); d.head.appendChild(l); p.setAttribute('id', 'wappalyzer-pending'); p.setAttribute('style', 'background-image: url(' + u + 'images/spinner.gif) !important'); c.appendChild(p); s.setAttribute('src', u + 'bookmarklet/wappalyzer.js'); s.onload = function() { window.wappalyzer = new Wappalyzer(); s = d.createElement('script'); s.setAttribute('src', u + 'bookmarklet/apps.js'); s.onload = function() { s = d.createElement('script'); s.setAttribute('src', u + 'bookmarklet/driver.js'); c.appendChild(s); }; c.appendChild(s); }; c.appendChild(s); d.body.appendChild(c); })();");
-add_mark("Preformance Analyzer", 'javascript:(function(){eljs = document.createElement("script");eljs.src="https://micmro.github.io/performance-bookmarklet/dist/performanceBookmarklet.min.js";document.body.appendChild(eljs)}())');
-add_mark("Run Functional.js",
+add_mark("Show Web Dev Panel", hide_subpanel2);
+add_submark2("FPS", "javascript:(function(){var script=document.createElement('script');script.onload=function(){var stats=new Stats();document.body.appendChild(stats.dom);requestAnimationFrame(function loop(){stats.update();requestAnimationFrame(loop)});};script.src='https://mrdoob.github.io/stats.js/build/stats.min.js';document.head.appendChild(script);})()");
+add_submark2("Github Search", 'javascript:var query = prompt("Search GitHub.com");user_search_ary = /%5Eu:(.*)/g.exec(query);if (user_search_ary) %7Bwindow.location = "https://github.com/" + user_search_ary%5B1%5D;%7Delse if (query) %7Bwindow.location = "https://github.com/search?q=" + query;%7D');
+add_submark2("Inject JQuery", "javascript:void(function(){document.body.appendChild(document.createElement('script')).src='http://code.jquery.com/jquery-1.7.2.min.js' })();");
+add_submark2("Web Stack", "javascript: (function() { var d = document, e = d.getElementById('wappalyzer-container'); if (e !== null) { d.body.removeChild(e); } var u = 'https://www.wappalyzer.com/', t = new Date().getTime(), c = d.createElement('div'), p = d.createElement('div'), l = d.createElement('link'), s = d.createElement('script'); c.setAttribute('id', 'wappalyzer-container'); l.setAttribute('rel', 'stylesheet'); l.setAttribute('href', u + 'css/bookmarklet.css'); d.head.appendChild(l); p.setAttribute('id', 'wappalyzer-pending'); p.setAttribute('style', 'background-image: url(' + u + 'images/spinner.gif) !important'); c.appendChild(p); s.setAttribute('src', u + 'bookmarklet/wappalyzer.js'); s.onload = function() { window.wappalyzer = new Wappalyzer(); s = d.createElement('script'); s.setAttribute('src', u + 'bookmarklet/apps.js'); s.onload = function() { s = d.createElement('script'); s.setAttribute('src', u + 'bookmarklet/driver.js'); c.appendChild(s); }; c.appendChild(s); }; c.appendChild(s); d.body.appendChild(c); })();");
+add_submark2("Preformance Analyzer", 'javascript:(function(){eljs = document.createElement("script");eljs.src="https://micmro.github.io/performance-bookmarklet/dist/performanceBookmarklet.min.js";document.body.appendChild(eljs)}())');
+add_submark2("Run Functional.js",
 "javascript:void(function(){document.body.appendChild(document.createElement('script')).src='http://caiorss.github.io/functional.js' })();");
-add_mark("Execute HTML", "javascript:var txt='';function getSelText(wndw){var sel='';if(document.all){sel=wndw.document.selection.createRange().text;}else{sel=wndw.window.getSelection();}return sel;}void(frms=window.frames);if(frms.length==0){txt=getSelText(window);}else{for(iQA=0;iQA&lt;frms.length;iQA++){void(txt=getSelText(frms[iQA]));if(txt.length&gt;0){break;}}}while(txt.length==0){txt=promt('Input:');}win=window.open('','','');void(win.document.write(txt));void(win.document.close())");
-add_mark("Show Cookies", ShowCookies);
+add_submark2("Execute HTML", "javascript:var txt='';function getSelText(wndw){var sel='';if(document.all){sel=wndw.document.selection.createRange().text;}else{sel=wndw.window.getSelection();}return sel;}void(frms=window.frames);if(frms.length==0){txt=getSelText(window);}else{for(iQA=0;iQA&lt;frms.length;iQA++){void(txt=getSelText(frms[iQA]));if(txt.length&gt;0){break;}}}while(txt.length==0){txt=promt('Input:');}win=window.open('','','');void(win.document.write(txt));void(win.document.close())");
+add_submark2("Show Cookies", ShowCookies);
 //==================
 add_label("Security and Auditing");
 add_mark("Remove Cookies", "javascript:void(document.cookie=null)");
@@ -253,3 +287,4 @@ add_mark("Close", remove_panel);
 
 subpanel.appendChild(UL);
 subpan2.appendChild(UL2);
+subpan3.appendChild(UL3);
