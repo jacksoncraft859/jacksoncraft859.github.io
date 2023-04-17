@@ -40,6 +40,10 @@ UL3 = create_tag("ul");
 UL3.className = "bookmarklets" ;
 UL3.style="list-style-type:disc";
 
+UL4 = create_tag("ul");
+UL4.className = "bookmarklets" ;
+UL4.style="list-style-type:disc";
+
 function add_mark(label, url, onclick){
   var il = create_tag("il");
   var a = hyperlink(label, url, onclick);
@@ -70,6 +74,16 @@ function add_submark2(label, url, onclick){
   
 };
 
+function add_submark3(label, url, onclick){
+  var il = create_tag("il");
+  var a = hyperlink(label, url, onclick);
+  
+  a.style.display = "block" ;
+  il.appendChild(a) ;
+  UL4.appendChild(il);
+  
+};
+
 function add_label(label){
   var il = create_tag("il");
   var t = create_text(label);
@@ -94,6 +108,15 @@ function add_sublabel2(label){
   // t.style.display = "block" ;
   il.appendChild(t) ;
   UL3.appendChild(il);
+  
+};
+
+function add_sublabel3(label){
+  var il = create_tag("il");
+  var t = create_text(label);
+  // t.style.display = "block" ;
+  il.appendChild(t) ;
+  UL4.appendChild(il);
   
 };
 
@@ -200,6 +223,14 @@ function hide_subpanel2(){
     }
 };
 
+function hide_subpanel3(){
+    if (subpan4.hidden == false){
+        subpan4.hidden = true;
+    }else{
+        subpan4.hidden = false;
+    }
+};
+
 panel = create_tag("div")
 
 panelbar = create_tag("div")
@@ -219,6 +250,8 @@ subpan2 = create_tag("div")
 
 subpan3 = create_tag("div")
 
+subpan4 = create_tag("div")
+
 panel.id = "InjectorPanel";
 panel.style.position = "fixed";
 panel.style.width = "250px";
@@ -232,6 +265,7 @@ panel.appendChild(panelbar);
 panel.appendChild(subpanel);
 panel.appendChild(subpan2);
 panel.appendChild(subpan3);
+panel.appendChild(subpan4);
 
 document.querySelector("body").appendChild(panel);
 
@@ -243,18 +277,21 @@ document.querySelector("body").appendChild(panel);
 add_label("Inspect Element");
 add_mark("Show Inspect panel", hide_subpanel);
 add_sublabel("Inspect");
+add_submark("Inspect Element", 'javascript:(function()%7B(function() %7Bvar x %3D document.createElement("script")%3Bx.src %3D "https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FSnowLord7%2Fdevconsole%40master%2Fmain.js"%3Bx.onload %3D alert("Loaded Developer Console!")%3Bdocument.head.appendChild(x)%3B%7D)()%7D)()');
 add_submark("Code Prompt", "javascript:function JSexe(){ if(valJS!='null' && valJS!='undefined')strJS=valJS; strJS=prompt('Your Javascript code or variable:',strJS); if(strJS!=null && strJS!='' && strJS!='undefined'){  setTimeout('valJS=\'\'+eval(strJS);JSexe()',10); } else{valJS='';strJS='';}}valJS='';strJS='';JSexe();");
 add_submark("Inspect", "javascript:document.getElementsByTagName('head')[0].appendChild(document.createElement('script')).setAttribute('src','http://www.karmatics.com/aardvark/bookmarklet.js')");
 add_submark("eInfo", 'javascript:(function(){einfojs = document.createElement("script");einfojs.src="https://chezmarklets--chezcoder.repl.co/wip/einfo.js";document.body.appendChild(einfojs)}())');
 add_submark("JS Shell", 'javascript:(function(){pipejs = document.createElement("script");pipejs.src="https://chezmarklets--chezcoder.repl.co/scripts/pipe.js";document.body.appendChild(pipejs)}())');
 add_submark("DOM Editor", 'javascript:(function(){domeditjs = document.createElement("script");domeditjs.src="https://chezmarklets.chezcoder.repl.co/wip/DOMEditor.js";document.body.appendChild(domeditjs)}())');
-add_label("Blooket");
-add_mark("Hacks", 'javascript:(function(){bguijs = document.createElement("script");bguijs.src="https://jacksoncraft859.github.io/gui.js";document.body.appendChild(bguijs)}())');
-add_label("Games");
-add_mark("Auto Clicker", 'javascript:var DELAY = 1;var autoClickerStyleElement = document.createElement("style");autoClickerStyleElement.innerHTML="*{cursor: crosshair !important;}";document.body.appendChild(autoClickerStyleElement);function addClicker(e) {if(!e.isTrusted) {return;}if(e.target.classList.contains("auto-clicker-target")) {e.target.classList.remove("auto-clicker-target");} else {e.target.classList.add("auto-clicker-target");}document.body.removeChild(autoClickerStyleElement);document.body.removeEventListener("click", addClicker);e.preventDefault();autoClick(e.target);}function autoClick(element) {if(element.classList.contains("auto-clicker-target")) {element.click();setTimeout(function(){ autoClick(element); }, DELAY);}}document.body.addEventListener("click", addClicker, 0);');
-add_mark("Custom Scratch", "https://jacksoncraft859.github.io/scratch-gui/?load_griffpatch=true&extension=https%3A%2F%2Fjacksoncraft859.github.io%2Fhope.js&extension=https%3A%2F%2Fsheeptester.github.io%2Fhello-world%2FlocalStorage-extension.js&extension=https%3A%2F%2Fjacksoncraft859.github.io%2Fpen.js&extension=https%3A%2F%2Fbill96012.github.io%2Fscratch-operator-extension%2Fscratch-advanced-operators.js&extension=https%3A%2F%2Ffamilycomicsstudios.github.io%2FScratchExtensionsFCS%2FCode%2Futils.js&extension=https%3A%2F%2Ffamilycomicsstudios.github.io%2FScratchExtensionsFCS%2FCode%2Fscratchmath.js&extension=https%3A%2F%2Ffamilycomicsstudios.github.io%2FScratchExtensionsFCS%2FCode%2Fevaluation.js&extension=https%3A%2F%2Fbill96012.github.io%2Fscratch-json-extension%2Fscratch-json.js&load_plugin=https%3A%2F%2Farpruss.github.io%2Fgamepad.js");
-add_mark("Snake", "javascript:Q=64;m=b=Q*Q;a=[P=l=u=d=p=S=w=0];u=89;f=(h=j=t=(b+Q)/2)-1;(B=(D=document).body).appendChild(x=D.createElement('p'));(X=x.style).position='fixed';X.left=X.top=0;X.background='#FFF%22;x.innerHTML=%22%3Cp%3E%3C/p%3E%3Ccanvas%3E%22;v=(s=x.childNodes)[0];(s=s[1]).width=s.height=5*Q;c=s.getContext(%222d%22);%20onkeydown=onblur=F=function(e,g){g?a[f]?(w+=m,f=Math.random(l+=8)*(R=Q-2)*R|(u=0),F(f+=Q+1+2*(f/R|0),g)):F(f):0%3Ee?(l?--l:(y=t,t=a[t]-2,F(y)),S+=(w*=0.8)/4,m=999/(u++%20+10),a[h+=[-1,-Q,1,Q][d=p]]?B.removeChild(x,alert(%22Game%20Over%22)):(F(h),F(e,j=h),v.innerHTML=P?(setTimeout(F,50,e,0),S|0):%22Press%20P%22)):-e?(y=(a[e]=e%3CQ|e%3E=Q*Q-Q|!(e%Q)|e%Q==Q-1|2*(e==h))+(e==f),e==h&&(a[j]=2+h),c.fillStyle=%22hsl(%22+99*!a[e]+%22,%22+2*m+%22%,%22+50*y+%22%)%22,c.fillRect(e%Q*5,5*(e/Q|0),5,5)):isNaN(y=e.keyCode-37)|43==y?(P=y&&!P)&&F(-1):%20p=!P|y&-4|!(y^2^d)?p:y;return!1};for(;--b;F(b));void%20F(-1);");
-add_mark("2048", "javascript:(t=>{var s=document.createElement(t);s.type='text/java'+t;s.src='https://sheeptester.github.io/javascripts/2048.js';document.body.appendChild(s);})('script')");
+add_label("Fun");
+add_mark("Fun Panel", hide_subpanel3);
+add_submark3("Snow", 'javascript: (t => {function i() {this.D = function() {const t = h.atan(this.i / this.d);l.save(), l.translate(this.b, this.a), l.rotate(-t), l.scale(this.e, this.e * h.max(1, h.pow(this.j, .7) / 15)), l.drawImage(m, -v / 2, -v / 2), l.restore()}}window;const h = Math,r = h.random,a = document,o = Date.now;e = (t => {l.clearRect(0, 0, _, f), l.fill(), requestAnimationFrame(e);const i = .001 * y.et;y.r();const s = L.et * g;for (var n = 0; n < C.length; ++n) {const t = C[n];t.i = h.sin(s + t.g) * t.h, t.j = h.sqrt(t.i * t.i + t.f), t.a += t.d * i, t.b += t.i * i, t.a > w && (t.a = -u), t.b > b && (t.b = -u), t.b < -u && (t.b = b), t.D()}}), s = (t => {for (var e = 0; e < p; ++e) C[e].a = r() * (f + u), C[e].b = r() * _}), n = (t => {c.width = _ = innerWidth, c.height = f = innerHeight, w = f + u, b = _ + u, s()});class d {constructor(t, e = !0) {this._ts = o(), this._p = !0, this._pa = o(), this.d = t, e && this.s()}get et() {return this.ip ? this._pa - this._ts : o() - this._ts}get rt() {return h.max(0, this.d - this.et)}get ip() {return this._p}get ic() {return this.et >= this.d}s() {return this._ts = o() - this.et, this._p = !1, this}r() {return this._pa = this._ts = o(), this}p() {return this._p = !0, this._pa = o(), this}st() {return this._p = !0, this}}const c = a.createElement("canvas");H = c.style, H.position = "fixed", H.left = 0, H.top = 0, H.width = "100vw", H.height = "100vh", H.zIndex = "100000", H.pointerEvents = "none", a.body.insertBefore(c, a.body.children[0]);const l = c.getContext("2d"),p = 300,g = 5e-4,u = 20;let _ = c.width = innerWidth,f = c.height = innerHeight,w = f + u,b = _ + u;const v = 15.2,m = a.createElement("canvas"),E = m.getContext("2d"),x = E.createRadialGradient(7.6, 7.6, 0, 7.6, 7.6, 7.6);x.addColorStop(0, "hsla(255,255%,255%,1)"), x.addColorStop(1, "hsla(255,255%,255%,0)"), E.fillStyle = x, E.fillRect(0, 0, v, v);let y = new d(0, !0),C = [],L = new d(0, !0);for (var j = 0; j < p; ++j) {const t = new i;t.a = r() * (f + u), t.b = r() * _, t.c = 1 * (3 * r() + .8), t.d = .1 * h.pow(t.c, 2.5) * 50 * (2 * r() + 1), t.d = t.d < 65 ? 65 : t.d, t.e = t.c / 7.6, t.f = t.d * t.d, t.g = r() * h.PI / 1.3, t.h = 15 * t.c, t.i = 0, t.j = 0, C.push(t)}s(), EL = a.addEventListener, EL("visibilitychange", () => setTimeout(n, 100), !1), EL("resize", n, !1), e()})()');
+add_submark3("Custom Matrix", "javascript:(function()%7Bjavascript%3A (function() %7B%0A    var letter %3D prompt('What letter%3F')%3B%0A    var color %3D prompt('What color%3F')%3B%0A    var speed %3D prompt('What speed%3F')%3B%0A    var container %3D document.createElement('div')%3B%0A    document.body.appendChild(container)%3B%0A    container.style.position %3D 'fixed'%3B%0A    container.style.top %3D '0'%3B%0A    container.style.left %3D '0'%3B%0A    container.style.width %3D '100%25'%3B%0A    container.style.height %3D '100%25'%3B%0A    container.style.overflow %3D 'hidden'%3B%0A    container.style.pointerEvents %3D 'none'%3B%0A%0A    function init() %7B%0A        var injection %3D document.createElement('style')%3B%0A        document.body.appendChild(injection)%3B%0A        injection.innerHTML %3D '%40-webkit-keyframes snow %7B%5Cnfrom %7Btop%3A-1%25%3B%7D%5Cnto%7Btop%3A121%25%3B%7D%7D%5Cn%40-moz-keyframes snow %7B%5Cnfrom %7Btop%3A -1%25%3B%7D%5Cnto %7Btop%3A 121%25%3B%7D%5Cn%7D'%3B%0A    %7D%0A    init()%3B%0A    window.setInterval(createParticle%2C speed)%3B%0A    timeChoices %3D %5B5%2C 6%2C 7%2C 8%2C 9%2C 10%5D%3B%0A%0A    function destroy(evt) %7B%0A        container.removeChild(evt.target)%3B%0A    %7D%0A%0A    function createParticle() %7B%0A        var particle %3D document.createElement('span')%3B%0A        var randomSpeed %3D timeChoices%5BMath.floor(Math.random() * timeChoices.length)%5D%3B%0A        particle.innerHTML %3D letter%3B%0A        particle.className %3D 'flake'%3B%0A        particle.style.position %3D 'absolute'%3B%0A        particle.style.color %3D color%3B%0A        particle.style.backgroundColor %3D 'transparent'%3B%0A        particle.style.width %3D '5px'%3B%0A        particle.style.height %3D '5px'%3B%0A        particle.style.pointerEvents %3D 'none'%3B%0A        particle.style.right %3D Math.random() * 100 %2B '%25'%3B%0A        particle.style.borderRadius %3D '50%25'%3B%0A        particle.style.WebkitAnimation %3D 'snow ' %2B randomSpeed %2B 's linear'%3B%0A        container.appendChild(particle)%3B%0A        particle.addEventListener('webkitAnimationEnd'%2C destroy)%3B%0A    %7D%0A%7D)()%7D)()%3B");
+add_submark3("Blooket Hacks", 'javascript:(function(){bguijs = document.createElement("script");bguijs.src="https://jacksoncraft859.github.io/gui.js";document.body.appendChild(bguijs)}())');
+add_submark3("Auto Clicker", 'javascript:var DELAY = 1;var autoClickerStyleElement = document.createElement("style");autoClickerStyleElement.innerHTML="*{cursor: crosshair !important;}";document.body.appendChild(autoClickerStyleElement);function addClicker(e) {if(!e.isTrusted) {return;}if(e.target.classList.contains("auto-clicker-target")) {e.target.classList.remove("auto-clicker-target");} else {e.target.classList.add("auto-clicker-target");}document.body.removeChild(autoClickerStyleElement);document.body.removeEventListener("click", addClicker);e.preventDefault();autoClick(e.target);}function autoClick(element) {if(element.classList.contains("auto-clicker-target")) {element.click();setTimeout(function(){ autoClick(element); }, DELAY);}}document.body.addEventListener("click", addClicker, 0);');
+add_submark3("Custom Scratch", "https://jacksoncraft859.github.io/scratch-gui/?load_griffpatch=true&extension=https%3A%2F%2Fjacksoncraft859.github.io%2Fhope.js&extension=https%3A%2F%2Fsheeptester.github.io%2Fhello-world%2FlocalStorage-extension.js&extension=https%3A%2F%2Fjacksoncraft859.github.io%2Fpen.js&extension=https%3A%2F%2Fbill96012.github.io%2Fscratch-operator-extension%2Fscratch-advanced-operators.js&extension=https%3A%2F%2Ffamilycomicsstudios.github.io%2FScratchExtensionsFCS%2FCode%2Futils.js&extension=https%3A%2F%2Ffamilycomicsstudios.github.io%2FScratchExtensionsFCS%2FCode%2Fscratchmath.js&extension=https%3A%2F%2Ffamilycomicsstudios.github.io%2FScratchExtensionsFCS%2FCode%2Fevaluation.js&extension=https%3A%2F%2Fbill96012.github.io%2Fscratch-json-extension%2Fscratch-json.js&load_plugin=https%3A%2F%2Farpruss.github.io%2Fgamepad.js");
+add_submark3("Snake", "javascript:Q=64;m=b=Q*Q;a=[P=l=u=d=p=S=w=0];u=89;f=(h=j=t=(b+Q)/2)-1;(B=(D=document).body).appendChild(x=D.createElement('p'));(X=x.style).position='fixed';X.left=X.top=0;X.background='#FFF%22;x.innerHTML=%22%3Cp%3E%3C/p%3E%3Ccanvas%3E%22;v=(s=x.childNodes)[0];(s=s[1]).width=s.height=5*Q;c=s.getContext(%222d%22);%20onkeydown=onblur=F=function(e,g){g?a[f]?(w+=m,f=Math.random(l+=8)*(R=Q-2)*R|(u=0),F(f+=Q+1+2*(f/R|0),g)):F(f):0%3Ee?(l?--l:(y=t,t=a[t]-2,F(y)),S+=(w*=0.8)/4,m=999/(u++%20+10),a[h+=[-1,-Q,1,Q][d=p]]?B.removeChild(x,alert(%22Game%20Over%22)):(F(h),F(e,j=h),v.innerHTML=P?(setTimeout(F,50,e,0),S|0):%22Press%20P%22)):-e?(y=(a[e]=e%3CQ|e%3E=Q*Q-Q|!(e%Q)|e%Q==Q-1|2*(e==h))+(e==f),e==h&&(a[j]=2+h),c.fillStyle=%22hsl(%22+99*!a[e]+%22,%22+2*m+%22%,%22+50*y+%22%)%22,c.fillRect(e%Q*5,5*(e/Q|0),5,5)):isNaN(y=e.keyCode-37)|43==y?(P=y&&!P)&&F(-1):%20p=!P|y&-4|!(y^2^d)?p:y;return!1};for(;--b;F(b));void%20F(-1);");
+add_submark3("2048", "javascript:(t=>{var s=document.createElement(t);s.type='text/java'+t;s.src='https://sheeptester.github.io/javascripts/2048.js';document.body.appendChild(s);})('script')");
 add_label("Useful");
 add_mark("Search on Bing", "javascript: Q = []; c = location.search.slice(1).split('&'); for (i in c) { f = c[i].split('='); if (f[0] == 'q' || f[0] == 'as_q' || f[0] == 'p' || f[0] == 'query') if (f[1]) Q.push(f[1]) } R = unescape(Q.join('; ').replace(/\+/g, ' ')); location = 'https://www.bing.com/search?q=%27%20+%20escape(R);");
 add_mark("Tiny URL", "javascript:void(open('http://tinyurl.com/create.php?url='+encodeURIComponent(location.href)))");
@@ -268,6 +305,9 @@ add_mark("Share", "javascript: void((function(svc) {     var d = document,      
 //==================
 add_label("Web Dev");
 add_mark("Show Web Dev Panel", hide_subpanel2);
+add_sublabel2("Web Dev Panel");
+add_submark2("DNS Lookup", "javascript:location.href='https://mxtoolbox.com/SuperTool.aspx?action=a%3a%27+window.location.hostname+%27&run=toolpage%27");
+add_submark2("IP Lookup", 'javascript:(function()%7Bvar ip%3Dprompt("Enter a IP Address%3A ")%2Ctalos%3D"https%3A%2F%2Ftalosintelligence.com%2Freputation_center%2Flookup%3Fsearch%3D"%2Bip%3Bwindow.open(talos%2C"_blank")%3Bvar vt%3D"https%3A%2F%2Fwww.virustotal.com%2Fgui%2Fip-address%2F"%2Bip%3Bwindow.open(vt%2C"_blank")%3Bvar alien%3D"https%3A%2F%2Fotx.alienvault.com%2Fbrowse%2Fglobal%3Fsection%3DAll%26q%3D"%2Bip%3Bwindow.open(alien%2C"_blank")%3Bvar censys%3D"https%3A%2F%2Fcensys.io%2Fipv4%2F"%2Bip%3Bwindow.open(censys%2C"_blank")%3Bvar shodan%3D"https%3A%2F%2Fwww.shodan.io%2Fsearch%3Fquery%3D"%2Bip%3Bwindow.open(shodan%2C"_blank")%3Bvar abuse%3D"https%3A%2F%2Fwww.abuseipdb.com%2Fcheck%2F"%2Bip%3Bwindow.open(abuse%2C"_blank")%7D)()');
 add_submark2("FPS", "javascript:(function(){var script=document.createElement('script');script.onload=function(){var stats=new Stats();document.body.appendChild(stats.dom);requestAnimationFrame(function loop(){stats.update();requestAnimationFrame(loop)});};script.src='https://mrdoob.github.io/stats.js/build/stats.min.js';document.head.appendChild(script);})()");
 add_submark2("Github Search", 'javascript:var query = prompt("Search GitHub.com");user_search_ary = /%5Eu:(.*)/g.exec(query);if (user_search_ary) %7Bwindow.location = "https://github.com/" + user_search_ary%5B1%5D;%7Delse if (query) %7Bwindow.location = "https://github.com/search?q=" + query;%7D');
 add_submark2("Inject JQuery", "javascript:void(function(){document.body.appendChild(document.createElement('script')).src='http://code.jquery.com/jquery-1.7.2.min.js' })();");
@@ -277,15 +317,19 @@ add_submark2("Run Functional.js",
 "javascript:void(function(){document.body.appendChild(document.createElement('script')).src='http://caiorss.github.io/functional.js' })();");
 add_submark2("Execute HTML", "javascript:var txt='';function getSelText(wndw){var sel='';if(document.all){sel=wndw.document.selection.createRange().text;}else{sel=wndw.window.getSelection();}return sel;}void(frms=window.frames);if(frms.length==0){txt=getSelText(window);}else{for(iQA=0;iQA&lt;frms.length;iQA++){void(txt=getSelText(frms[iQA]));if(txt.length&gt;0){break;}}}while(txt.length==0){txt=promt('Input:');}win=window.open('','','');void(win.document.write(txt));void(win.document.close())");
 add_submark2("Show Cookies", ShowCookies);
+add_label("Multitools")
+add_mark("Multitool 1", "javascript:(function () %7Bvar v %3D document.createElement(%27script%27)%3Bv.src %3D %27https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FBrowncha023%2FVengeance%40v1.2.0%2Fscript.min.js%27%3Bdocument.body.appendChild(v)%3B%7D())");
 //==================
 add_label("Security and Auditing");
 add_mark("Remove Cookies", "javascript:void(document.cookie=null)");
 add_mark("PwnYoutube", "javascript:(function(){url='http://deturl.com/download-video.js';document.body.appendChild(document.createElement('script')).src=url+'?'+new Date().getTime();})();");
 add_mark("Full URLs", fullUrls)
-add_label("Proxy");
+add_label("Proxy & Cloaking");
 add_mark("Interstellar", "https://gointerstellar.app/");
+add_mark("Tab Cloaking", "javascript:document.title=prompt('Welcome to the Tab Cloak setup!\n\nEnter the title you want to set for this tab::');var icon=document.querySelector(`link[rel='icon']`);if (!icon) {icon = document.createElement('link');icon.rel='icon';};switch(prompt('What icon would you like to use?\n\n[1] Google Search\n[2] Google Drive\n[3] Custom URL\n\nPlease only enter a number!%27)){case%271%27:icon.setAttribute(%27href%27,%27https://www.google.com/favicon.ico%27);break;case%272%27:icon.setAttribute(%27href%27,%27https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png%27);break;case%273%27:icon.setAttribute(%27href%27,prompt(%27Please enter the URL for the icon you want:%27));} document.head.appendChild(icon);");
 add_mark("Close", remove_panel);
 
 subpanel.appendChild(UL);
 subpan2.appendChild(UL2);
 subpan3.appendChild(UL3);
+subpan4.appendChild(UL4);
