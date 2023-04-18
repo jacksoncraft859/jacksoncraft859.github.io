@@ -334,7 +334,7 @@ subpan2.appendChild(UL2);
 subpan3.appendChild(UL3);
 subpan4.appendChild(UL4);
 
-panel.onload = function() {
+window.onload = function() {
   hide_subpanel ;
   hide_subpanel2 ;
   hide_subpanel3 ;
