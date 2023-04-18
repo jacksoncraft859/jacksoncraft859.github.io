@@ -247,13 +247,13 @@ panelbar.onclick = hide_panel ;
 subpanel = create_tag("div")
 
 subpan2 = create_tag("div")
-subpan2.className = "subpanels" ;
+subpan2.id = "subpanels";
 
 subpan3 = create_tag("div")
-subpan3.className = "subpanels" ;
+subpan3.id = "subpanels";
 
 subpan4 = create_tag("div")
-subpan4.className = "subpanels" ;
+subpan4.id = "subpanels";
 
 panel.id = "InjectorPanel";
 panel.style.position = "fixed";
@@ -337,7 +337,7 @@ subpan2.appendChild(UL2);
 subpan3.appendChild(UL3);
 subpan4.appendChild(UL4);
 
-document.getElementsByClassName("subpanels").onload = function() {
+document.getElementById("subpanels").onload = function() {
   hide_subpanel();
   hide_subpanel2();
   hide_subpanel3();
