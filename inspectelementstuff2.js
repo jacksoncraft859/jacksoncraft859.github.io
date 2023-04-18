@@ -261,7 +261,7 @@ subpan4.id = "subpanels";
 
 panel.id = "InjectorPanel";
 panel.style.position = "fixed";
-panel.style.right = "0px";
+panel.style.right = "150px";
 panel.style.width = "250px";
 //panel.style.height = "500px";
 panel.style.top = "0px";
