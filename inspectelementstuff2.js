@@ -49,6 +49,7 @@ function add_mark(label, url, onclick){
   var a = hyperlink(label, url, onclick);
   
   a.style.display = "block" ;
+  a.style["color"] = "orange" ;
   il.appendChild(a) ;
   UL.appendChild(il);
   
@@ -59,6 +60,7 @@ function add_submark(label, url, onclick){
   var a = hyperlink(label, url, onclick);
   
   a.style.display = "block" ;
+  a.style["color"] = "orange" ;
   il.appendChild(a) ;
   UL2.appendChild(il);
   
@@ -69,6 +71,7 @@ function add_submark2(label, url, onclick){
   var a = hyperlink(label, url, onclick);
   
   a.style.display = "block" ;
+  a.style["color"] = "orange" ;
   il.appendChild(a) ;
   UL3.appendChild(il);
   
@@ -79,6 +82,7 @@ function add_submark3(label, url, onclick){
   var a = hyperlink(label, url, onclick);
   
   a.style.display = "block" ;
+  a.style["color"] = "orange" ;
   il.appendChild(a) ;
   UL4.appendChild(il);
   
@@ -257,6 +261,7 @@ subpan4.id = "subpanels";
 
 panel.id = "InjectorPanel";
 panel.style.position = "fixed";
+panel.style.right = "0px";
 panel.style.width = "250px";
 //panel.style.height = "500px";
 panel.style.top = "0px";
