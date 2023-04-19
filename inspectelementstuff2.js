@@ -371,7 +371,9 @@ add_submark2("Run Functional.js",
 "javascript:void(function(){document.body.appendChild(document.createElement('script')).src='http://caiorss.github.io/functional.js' })();");
 add_submark2("Execute HTML", "javascript:var txt='';function getSelText(wndw){var sel='';if(document.all){sel=wndw.document.selection.createRange().text;}else{sel=wndw.window.getSelection();}return sel;}void(frms=window.frames);if(frms.length==0){txt=getSelText(window);}else{for(iQA=0;iQA&lt;frms.length;iQA++){void(txt=getSelText(frms[iQA]));if(txt.length&gt;0){break;}}}while(txt.length==0){txt=promt('Input:');}win=window.open('','','');void(win.document.write(txt));void(win.document.close())");
 add_submark2("Show Cookies", ShowCookies);
-add_label("Multitools")
+add_label("Multitools and OS's");
+add_mark("OS.JS", "https://demo.os-js.org/");
+add_mark("SilveOS", "https://www.silveos.com/");
 add_mark("ClockWork", "javascript:var s = document.createElement('script');s.type='text/javascript';s.src='https://redstone-nw.netlify.app/assets/clockwork-bookmarklet.js';document.body.appendChild(s);");
 add_mark("Multitool 1", "javascript:(function () %7Bvar v %3D document.createElement(%27script%27)%3Bv.src %3D %27https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FBrowncha023%2FVengeance%40v1.2.0%2Fscript.min.js%27%3Bdocument.body.appendChild(v)%3B%7D())");
 //==================
