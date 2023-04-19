@@ -1,0 +1,13 @@
+#subpanels {
+  background-color: "black";
+  color: "white";
+}
+
+#links {
+  color: "orange";
+}
+
+#default-theme bar {
+  background-color: "orange";
+  color: "white";
+}
