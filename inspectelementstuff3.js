@@ -251,15 +251,16 @@ panelbar.onclick = hide_panel ;
 panelbar.style.cursor = "move";
 
 subpanel = create_tag("div")
+subpanel.className = "subpanels";
 
 subpan2 = create_tag("div")
-subpan2.id = "subpanels";
+subpan2.className = "subpanels";
 
 subpan3 = create_tag("div")
-subpan3.id = "subpanels";
+subpan3.className = "subpanels";
 
 subpan4 = create_tag("div")
-subpan4.id = "subpanels";
+subpan4.className = "subpanels";
 
 panel.id = "InjectorPanel";
 panel.className = "panel";
