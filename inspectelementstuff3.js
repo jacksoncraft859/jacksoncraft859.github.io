@@ -49,7 +49,7 @@ function add_mark(label, url, onclick){
   var a = hyperlink(label, url, onclick);
   
   a.style.display = "block" ;
-  a.className = "links";
+  a.className = "links" ;
   il.appendChild(a) ;
   UL.appendChild(il);
   
@@ -60,7 +60,7 @@ function add_submark(label, url, onclick){
   var a = hyperlink(label, url, onclick);
   
   a.style.display = "block" ;
-  a.className = "links";
+  a.className = "links" ;
   il.appendChild(a) ;
   UL2.appendChild(il);
   
@@ -71,7 +71,7 @@ function add_submark2(label, url, onclick){
   var a = hyperlink(label, url, onclick);
   
   a.style.display = "block" ;
-  a.className = "links";
+  a.className = "links" ;
   il.appendChild(a) ;
   UL3.appendChild(il);
   
@@ -82,7 +82,7 @@ function add_submark3(label, url, onclick){
   var a = hyperlink(label, url, onclick);
   
   a.style.display = "block" ;
-  a.className = "links";
+  a.className = "links" ;
   il.appendChild(a) ;
   UL4.appendChild(il);
   
@@ -235,6 +235,13 @@ function hide_subpanel3(){
     }
 };
 
+var head = document.getElementsByTagName('HEAD')[0];
+var link = document.createElement('link');
+link.rel = 'stylesheet';
+link.type = 'text/css';
+link.href = 'https://jacksoncraft859.github.io/theme.css';
+head.appendChild(link);
+
 panel = create_tag("div")
 
 panelbar = create_tag("div")
@@ -278,13 +285,6 @@ panel.appendChild(subpan3);
 panel.appendChild(subpan4);
 
 document.querySelector("body").appendChild(panel);
-
-var head = document.getElementsByTagName('HEAD')[0];
-var link = document.createElement('link');
-link.rel = 'stylesheet';
-link.type = 'text/css';
-link.href = 'https://jacksoncraft859.github.io/theme.css';
-head.appendChild(link);
 
 
 document.getElementsByClassName("links").style["color"] = "orange";
