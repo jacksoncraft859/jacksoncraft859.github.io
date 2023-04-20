@@ -286,6 +286,8 @@ link.type = 'text/css';
 link.href = 'https://jacksoncraft859.github.io/theme.css';
 head.appendChild(link);
 
+
+document.getElementsByClassName("links").style.color = "orange";
 // Serch Web Archive
 //htmlcode =  "javascript:(function(){window.location='http://web.archive.org/web/*/' + document.URL})()' > Web Archive</a></ul>" ;
 
