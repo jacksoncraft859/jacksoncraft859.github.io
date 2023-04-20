@@ -1,14 +1,14 @@
-div .panel {
+.panel {
   background-color: "black";
   color: "white";
 }
 
-div .subpanels {
+.subpanels {
   background-color: "black";
   color: "white";
 }
 
-div #InjectorPanel {
+#InjectorPanel {
   background-color: "black";
   color: "white";
 }
@@ -17,12 +17,12 @@ div #InjectorPanel {
   color: "orange";
 }
 
-div .panelbar {
+.panelbar {
   background-color: "orange";
   color: "white";
 }
 
-div #InjectorPanel bar{
+#InjectorPanel bar{
   background-color: "orange";
   color: "white";
 }
