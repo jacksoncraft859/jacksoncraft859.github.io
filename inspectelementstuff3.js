@@ -239,7 +239,7 @@ function set_theme_blue(){
     panelbar.style["background-color"] = "dodgerblue";
     panel.style["background-color"] = "white";
     panel.style["color"] = "black";
-    const link = document.querySelector('#link');
+    const link = document.getElementById("link");
     link.style["color"] = "dodgerblue";
 };
 
@@ -278,7 +278,7 @@ panel.style.top = "0px";
 panel.style["background-color"] = "black";
 panel.style["color"] = "white";
 
-const link = document.querySelector('#link');
+const link = document.getElementById("link");
 link.style["color"] = "orange";
 
 
@@ -335,7 +335,7 @@ function dragElement(elmnt) {
     document.onmouseup = null;
     document.onmousemove = null;
   }
-}
+};
 
 //==================
 add_label("Themes");
