@@ -332,8 +332,6 @@ function dragElement(elmnt) {
 };
 
 //==================
-add_label("Themes");
-add_mark("Blue Theme", set_theme_blue);
 add_label("Inspect Element");
 add_mark("Show Inspect panel", hide_subpanel);
 add_sublabel("Inspect");
