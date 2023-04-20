@@ -49,7 +49,7 @@ function add_mark(label, url, onclick){
   var a = hyperlink(label, url, onclick);
   
   a.style.display = "block" ;
-  a.id = "link" ;
+  a.className = "links";
   il.appendChild(a) ;
   UL.appendChild(il);
   
@@ -60,7 +60,7 @@ function add_submark(label, url, onclick){
   var a = hyperlink(label, url, onclick);
   
   a.style.display = "block" ;
-  a.id = "link2" ;
+  a.className = "links";
   il.appendChild(a) ;
   UL2.appendChild(il);
   
@@ -71,7 +71,7 @@ function add_submark2(label, url, onclick){
   var a = hyperlink(label, url, onclick);
   
   a.style.display = "block" ;
-  a.id = "link3" ;
+  a.className = "links";
   il.appendChild(a) ;
   UL3.appendChild(il);
   
@@ -82,7 +82,7 @@ function add_submark3(label, url, onclick){
   var a = hyperlink(label, url, onclick);
   
   a.style.display = "block" ;
-  a.id = "link4" ;
+  a.className = "links";
   il.appendChild(a) ;
   UL4.appendChild(il);
   
@@ -235,14 +235,6 @@ function hide_subpanel3(){
     }
 };
 
-function set_theme_blue(){
-    panelbar.style["background-color"] = "dodgerblue";
-    panel.style["background-color"] = "white";
-    panel.style["color"] = "black";
-    link = document.getElementById("link");
-    link.style["color"] = "dodgerblue";
-};
-
 panel = create_tag("div")
 
 panelbar = create_tag("div")
@@ -252,8 +244,8 @@ panelbar.innerHTML = "JS PANEL" ;
 
 // panelbar.style.position = "fixed"
 panelbar.id = "InjectorPanel bar";
+panelbar.className = "panelbar";
 panelbar.style.height = "20px";
-panelbar.style["background-color"] = "orange";
 panelbar.style["z-index"] = 10e5;
 panelbar.onclick = hide_panel ;
 panelbar.style.cursor = "move";
@@ -270,16 +262,12 @@ subpan4 = create_tag("div")
 subpan4.id = "subpanels";
 
 panel.id = "InjectorPanel";
+panel.className = "panel";
 panel.style.position = "absolute";
 panel.style.right = "150px";
 panel.style.width = "250px";
 //panel.style.height = "500px";
 panel.style.top = "0px";
-panel.style["background-color"] = "black";
-panel.style["color"] = "white";
-
-link = document.getElementById("link");
-link.style["color"] = "orange";
 
 
 panel.appendChild(panelbar);
@@ -290,7 +278,13 @@ panel.appendChild(subpan4);
 
 document.querySelector("body").appendChild(panel);
 
- 
+var head = document.getElementsByTagName('HEAD')[0];
+var link = document.createElement('link');
+link.rel = 'stylesheet';
+link.type = 'text/css';
+link.href = 'default_theme.css';
+head.appendChild(link);
+
 // Serch Web Archive
 //htmlcode =  "javascript:(function(){window.location='http://web.archive.org/web/*/' + document.URL})()' > Web Archive</a></ul>" ;
 
