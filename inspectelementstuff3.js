@@ -45,7 +45,7 @@ UL4.className = "bookmarklets" ;
 UL4.style="list-style-type:disc";
 
 function add_mark(label, url, onclick){
-  var il = create_tag("il");
+  var il = create_tag("li");
   var a = hyperlink(label, url, onclick);
   
   a.style.display = "block" ;
@@ -56,7 +56,7 @@ function add_mark(label, url, onclick){
 };
 
 function add_submark(label, url, onclick){
-  var il = create_tag("il");
+  var il = create_tag("li");
   var a = hyperlink(label, url, onclick);
   
   a.style.display = "block" ;
@@ -67,7 +67,7 @@ function add_submark(label, url, onclick){
 };
 
 function add_submark2(label, url, onclick){
-  var il = create_tag("il");
+  var il = create_tag("li");
   var a = hyperlink(label, url, onclick);
   
   a.style.display = "block" ;
@@ -78,7 +78,7 @@ function add_submark2(label, url, onclick){
 };
 
 function add_submark3(label, url, onclick){
-  var il = create_tag("il");
+  var il = create_tag("li");
   var a = hyperlink(label, url, onclick);
   
   a.style.display = "block" ;
@@ -89,7 +89,7 @@ function add_submark3(label, url, onclick){
 };
 
 function add_label(label){
-  var il = create_tag("il");
+  var il = create_tag("li");
   var t = create_text(label);
   // t.style.display = "block" ;
   il.appendChild(t) ;
@@ -98,7 +98,7 @@ function add_label(label){
 };
 
 function add_sublabel(label){
-  var il = create_tag("il");
+  var il = create_tag("li");
   var t = create_text(label);
   // t.style.display = "block" ;
   il.appendChild(t) ;
@@ -107,7 +107,7 @@ function add_sublabel(label){
 };
 
 function add_sublabel2(label){
-  var il = create_tag("il");
+  var il = create_tag("li");
   var t = create_text(label);
   // t.style.display = "block" ;
   il.appendChild(t) ;
@@ -116,7 +116,7 @@ function add_sublabel2(label){
 };
 
 function add_sublabel3(label){
-  var il = create_tag("il");
+  var il = create_tag("li");
   var t = create_text(label);
   // t.style.display = "block" ;
   il.appendChild(t) ;
