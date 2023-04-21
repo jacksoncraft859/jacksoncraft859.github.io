@@ -228,7 +228,7 @@ function hide_subpanel3(){
 };
 
 head = document.getElementsByTagName('HEAD')[0];
-link = document.createElement('link');
+link = document.create_tag('link');
 link.rel = 'stylesheet';
 link.type = 'text/css';
 link.href = 'https://jacksoncraft859.github.io/theme.css';
@@ -242,8 +242,8 @@ panelbar = create_tag("div")
 panelbar.innerHTML = "JS PANEL" ;
 
 // panelbar.style.position = "fixed"
-panelbar.id = "InjectorPanel bar";
 panelbar.className = "panelbar" ;
+panelbar.id = "InjectorPanel bar";
 panelbar.style.height = "20px";
 panelbar.style["z-index"] = 10e5;
 panelbar.onclick = hide_panel ;
