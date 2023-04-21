@@ -323,7 +323,7 @@ function dragElement(elmnt) {
     document.onmouseup = null;
     document.onmousemove = null;
   }
-}
+};
 
 //==================
 add_label("Inspect Element");
