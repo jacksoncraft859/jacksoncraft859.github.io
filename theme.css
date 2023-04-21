@@ -31,3 +31,7 @@
   background-color: "orange";
   color: "white";
 }
+
+.bookmarklets {
+  list-style-type: disc;
+}
