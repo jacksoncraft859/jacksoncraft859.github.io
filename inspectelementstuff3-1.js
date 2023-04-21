@@ -243,7 +243,7 @@ panelbar.innerHTML = "JS PANEL" ;
 
 // panelbar.style.position = "fixed"
 panelbar.className = "panelbar" ;
-panelbar.id = "InjectorPanel bar";
+panelbar.id = "InjectorPanelbar";
 panelbar.style.height = "20px";
 panelbar.style["z-index"] = 10e5;
 panelbar.onclick = hide_panel ;
@@ -286,7 +286,7 @@ dragElement(document.getElementById("InjectorPanel"));
 
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-  if (document.getElementById(elmnt.id + "bar")) {
+  if (document.getElementById("InjectorPanelbar")) {
     // if present, the header is where you move the DIV from:
     document.getElementById(elmnt.id + "bar").onmousedown = dragMouseDown;
   } else {
