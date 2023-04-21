@@ -243,7 +243,7 @@ panelbar.innerHTML = "JS PANEL" ;
 
 // panelbar.style.position = "fixed"
 panelbar.id = "InjectorPanel bar";
-panelbar.className = "panelbar"
+panelbar.className = "panelbar" ;
 panelbar.style.height = "20px";
 panelbar.style["z-index"] = 10e5;
 panelbar.onclick = hide_panel ;
