@@ -227,13 +227,6 @@ function hide_subpanel3(){
     }
 };
 
-head = document.getElementsByTagName('HEAD')[0];
-link = document.create_tag('link');
-link.rel = 'stylesheet';
-link.type = 'text/css';
-link.href = 'https://jacksoncraft859.github.io/theme.css';
-head.appendChild(link);
-
 panel = create_tag("div")
 
 panelbar = create_tag("div")
@@ -242,8 +235,8 @@ panelbar = create_tag("div")
 panelbar.innerHTML = "JS PANEL" ;
 
 // panelbar.style.position = "fixed"
-panelbar.className = "panelbar" ;
-panelbar.id = "InjectorPanelbar";
+panelbar.className = "panelbar";
+panelbar.id = "InjectorPanel bar";
 panelbar.style.height = "20px";
 panelbar.style["z-index"] = 10e5;
 panelbar.onclick = hide_panel ;
@@ -286,7 +279,7 @@ dragElement(document.getElementById("InjectorPanel"));
 
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-  if (document.getElementById("InjectorPanelbar")) {
+  if (document.getElementById(elmnt.id + "bar")) {
     // if present, the header is where you move the DIV from:
     document.getElementById(elmnt.id + "bar").onmousedown = dragMouseDown;
   } else {
@@ -323,7 +316,7 @@ function dragElement(elmnt) {
     document.onmouseup = null;
     document.onmousemove = null;
   }
-};
+}
 
 //==================
 add_label("Inspect Element");
