@@ -244,7 +244,6 @@ function change_theme_blue(){
     panel.style["color"] = "dodgerblue";
     panelbar.style["background-color"] = "dodgerblue";
     panel.style["color"] = "white";
-    document.getElementsByClassName("links").style["color"] = "dodgerblue";
 };
 
 function chnage_theme_default(){
@@ -252,7 +251,6 @@ function chnage_theme_default(){
     panelbar.style["color"] = "white";
     panel.style["background-color"] = "black";
     panel.style["color"] = "orange";
-    document.getElementsByClassName("links").style["color"] = "orange";
 };
 
 panel = create_tag("div")
@@ -290,8 +288,6 @@ panel.style.width = "250px";
 panel.style.top = "0px";
 panel.style["background-color"] = "black";
 panel.style["color"] = "orange";
-
-document.getElementsByClassName("links").style["color"] = "orange";
 
 
 panel.appendChild(panelbar);
