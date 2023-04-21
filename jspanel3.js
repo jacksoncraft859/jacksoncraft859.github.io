@@ -49,6 +49,7 @@ function add_mark(label, url, onclick){
   var a = hyperlink(label, url, onclick);
   
   a.style.display = "block" ;
+  a.style.className = "links" ;
   a.style["color"] = "gray" ;
   il.appendChild(a) ;
   UL.appendChild(il);
@@ -60,6 +61,7 @@ function add_submark(label, url, onclick){
   var a = hyperlink(label, url, onclick);
   
   a.style.display = "block" ;
+  a.style.className = "links" ;
   a.style["color"] = "gray" ;
   il.appendChild(a) ;
   UL2.appendChild(il);
@@ -71,6 +73,7 @@ function add_submark2(label, url, onclick){
   var a = hyperlink(label, url, onclick);
   
   a.style.display = "block" ;
+  a.style.className = "links" ;
   a.style["color"] = "gray" ;
   il.appendChild(a) ;
   UL3.appendChild(il);
@@ -82,6 +85,7 @@ function add_submark3(label, url, onclick){
   var a = hyperlink(label, url, onclick);
   
   a.style.display = "block" ;
+  a.style.className = "links" ;
   a.style["color"] = "gray" ;
   il.appendChild(a) ;
   UL4.appendChild(il);
@@ -236,9 +240,19 @@ function hide_subpanel3(){
 };
 
 function change_theme_blue(){
-    panel.style["background-color"] = "white";
+    panel.style["background-color"] = "black";
     panel.style["color"] = "dodgerblue";
     panelbar.style["background-color"] = "dodgerblue";
+    panel.style["color"] = "white";
+    document.getElementsByClassName("links").style["color"] = "dodgerblue";
+};
+
+function chnage_theme_default(){
+    panelbar.style["background-color"] = "orange";
+    panelbar.style["color"] = "white";
+    panel.style["background-color"] = "black";
+    panel.style["color"] = "orange";
+    document.getElementsByClassName("links").style["color"] = "orange";
 };
 
 panel = create_tag("div")
@@ -252,6 +266,7 @@ panelbar.innerHTML = "JS PANEL" ;
 panelbar.id = "InjectorPanel bar";
 panelbar.style.height = "20px";
 panelbar.style["background-color"] = "orange";
+panelbar.style["color"] = "white";
 panelbar.style["z-index"] = 10e5;
 panelbar.onclick = hide_panel ;
 panelbar.style.cursor = "move";
@@ -274,7 +289,9 @@ panel.style.width = "250px";
 //panel.style.height = "500px";
 panel.style.top = "0px";
 panel.style["background-color"] = "black";
-panel.style["color"] = "white";
+panel.style["color"] = "orange";
+
+document.getElementsByClassName("links").style["color"] = "orange";
 
 
 panel.appendChild(panelbar);
@@ -334,7 +351,8 @@ function dragElement(elmnt) {
 
 //==================
 add_label("Tests")
-add_mark("Blue Theme", change_theme_blue)
+add_mark("Default Theme", change_theme_default);
+add_mark("Blue Theme", change_theme_blue);
 add_label("Inspect Element");
 add_mark("Show Inspect panel", hide_subpanel);
 add_sublabel("Inspect");
