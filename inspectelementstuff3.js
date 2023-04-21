@@ -30,67 +30,59 @@ function hyperlink(label, url, onclick){
 
 UL = create_tag("ul");
 UL.className = "bookmarklets" ;
-UL.style="list-style-type:disc";
 
 UL2 = create_tag("ul");
 UL2.className = "bookmarklets" ;
-UL2.style="list-style-type:disc";
 
 UL3 = create_tag("ul");
 UL3.className = "bookmarklets" ;
-UL3.style="list-style-type:disc";
 
 UL4 = create_tag("ul");
 UL4.className = "bookmarklets" ;
-UL4.style="list-style-type:disc";
 
 function add_mark(label, url, onclick){
-  var il = create_tag("li");
-  var a = hyperlink(label, url, onclick);
+  il = create_tag("il");
+  hypera = hyperlink(label, url, onclick);
   
-  a.style.display = "block" ;
-  a.className = "links" ;
+  hypera.className = "links" ;
   il.appendChild(a) ;
   UL.appendChild(il);
   
 };
 
 function add_submark(label, url, onclick){
-  var il = create_tag("li");
-  var a = hyperlink(label, url, onclick);
+  il = create_tag("il");
+  hypera = hyperlink(label, url, onclick);
   
-  a.style.display = "block" ;
-  a.className = "links" ;
+  hypera.className = "links" ;
   il.appendChild(a) ;
   UL2.appendChild(il);
   
 };
 
 function add_submark2(label, url, onclick){
-  var il = create_tag("li");
-  var a = hyperlink(label, url, onclick);
+  il = create_tag("il");
+  hypera = hyperlink(label, url, onclick);
   
-  a.style.display = "block" ;
-  a.className = "links" ;
+  hypera.className = "links" ;
   il.appendChild(a) ;
   UL3.appendChild(il);
   
 };
 
 function add_submark3(label, url, onclick){
-  var il = create_tag("li");
-  var a = hyperlink(label, url, onclick);
+  il = create_tag("il");
+  hypera = hyperlink(label, url, onclick);
   
-  a.style.display = "block" ;
-  a.className = "links" ;
+  hypera.className = "links" ;
   il.appendChild(a) ;
   UL4.appendChild(il);
   
 };
 
 function add_label(label){
-  var il = create_tag("li");
-  var t = create_text(label);
+  il = create_tag("li");
+  t = create_text(label);
   // t.style.display = "block" ;
   il.appendChild(t) ;
   UL.appendChild(il);
@@ -98,8 +90,8 @@ function add_label(label){
 };
 
 function add_sublabel(label){
-  var il = create_tag("li");
-  var t = create_text(label);
+  il = create_tag("li");
+  t = create_text(label);
   // t.style.display = "block" ;
   il.appendChild(t) ;
   UL2.appendChild(il);
@@ -107,8 +99,8 @@ function add_sublabel(label){
 };
 
 function add_sublabel2(label){
-  var il = create_tag("li");
-  var t = create_text(label);
+  il = create_tag("li");
+  t = create_text(label);
   // t.style.display = "block" ;
   il.appendChild(t) ;
   UL3.appendChild(il);
@@ -116,8 +108,8 @@ function add_sublabel2(label){
 };
 
 function add_sublabel3(label){
-  var il = create_tag("li");
-  var t = create_text(label);
+  il = create_tag("li");
+  t = create_text(label);
   // t.style.display = "block" ;
   il.appendChild(t) ;
   UL4.appendChild(il);
@@ -290,8 +282,6 @@ panel.appendChild(subpan4);
 
 document.querySelector("body").appendChild(panel);
 
-
-document.getElementsByClassName("links").style["color"] = "orange";
 // Serch Web Archive
 //htmlcode =  "javascript:(function(){window.location='http://web.archive.org/web/*/' + document.URL})()' > Web Archive</a></ul>" ;
 
