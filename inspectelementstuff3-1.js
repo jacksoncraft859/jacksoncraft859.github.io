@@ -30,26 +30,21 @@ function hyperlink(label, url, onclick){
 
 UL = create_tag("ul");
 UL.className = "bookmarklets" ;
-UL.style="list-style-type:disc";
 
 UL2 = create_tag("ul");
 UL2.className = "bookmarklets" ;
-UL2.style="list-style-type:disc";
 
 UL3 = create_tag("ul");
 UL3.className = "bookmarklets" ;
-UL3.style="list-style-type:disc";
 
 UL4 = create_tag("ul");
 UL4.className = "bookmarklets" ;
-UL4.style="list-style-type:disc";
 
 function add_mark(label, url, onclick){
   var il = create_tag("il");
   var a = hyperlink(label, url, onclick);
   
-  a.style.display = "block" ;
-  a.className = "links";
+  a.className = "links" ;
   il.appendChild(a) ;
   UL.appendChild(il);
   
@@ -59,8 +54,7 @@ function add_submark(label, url, onclick){
   var il = create_tag("il");
   var a = hyperlink(label, url, onclick);
   
-  a.style.display = "block" ;
-  a.className = "links";
+  a.className = "links" ;
   il.appendChild(a) ;
   UL2.appendChild(il);
   
@@ -70,8 +64,7 @@ function add_submark2(label, url, onclick){
   var il = create_tag("il");
   var a = hyperlink(label, url, onclick);
   
-  a.style.display = "block" ;
-  a.className = "links";
+  a.className = "links" ;
   il.appendChild(a) ;
   UL3.appendChild(il);
   
@@ -81,8 +74,7 @@ function add_submark3(label, url, onclick){
   var il = create_tag("il");
   var a = hyperlink(label, url, onclick);
   
-  a.style.display = "block" ;
-  a.className = "links";
+  a.className = "links" ;
   il.appendChild(a) ;
   UL4.appendChild(il);
   
@@ -235,6 +227,13 @@ function hide_subpanel3(){
     }
 };
 
+head = document.getElementsByTagName('HEAD')[0];
+link = document.createElement('link');
+link.rel = 'stylesheet';
+link.type = 'text/css';
+link.href = 'https://jacksoncraft859.github.io/theme.css';
+head.appendChild(link);
+
 panel = create_tag("div")
 
 panelbar = create_tag("div")
@@ -244,35 +243,31 @@ panelbar.innerHTML = "JS PANEL" ;
 
 // panelbar.style.position = "fixed"
 panelbar.id = "InjectorPanel bar";
-panelbar.className = "panelbar";
 panelbar.style.height = "20px";
+panelbar.style["background-color"] = "orange";
 panelbar.style["z-index"] = 10e5;
 panelbar.onclick = hide_panel ;
 panelbar.style.cursor = "move";
 
 subpanel = create_tag("div")
-subpanel.className = "subpanels";
-subpanel.id = "subpanels";
 
 subpan2 = create_tag("div")
 subpan2.className = "subpanels";
-subpan2.id = "subpanels";
 
 subpan3 = create_tag("div")
 subpan3.className = "subpanels";
-subpan3.id = "subpanels";
 
 subpan4 = create_tag("div")
 subpan4.className = "subpanels";
-subpan4.id = "subpanels";
 
 panel.id = "InjectorPanel";
-panel.className = "panel";
 panel.style.position = "absolute";
 panel.style.right = "150px";
 panel.style.width = "250px";
 //panel.style.height = "500px";
 panel.style.top = "0px";
+panel.style["background-color"] = "black";
+panel.style["color"] = "white";
 
 
 panel.appendChild(panelbar);
@@ -283,15 +278,7 @@ panel.appendChild(subpan4);
 
 document.querySelector("body").appendChild(panel);
 
-var head = document.getElementsByTagName('HEAD')[0];
-var link = document.createElement('link');
-link.rel = 'stylesheet';
-link.type = 'text/css';
-link.href = 'https://jacksoncraft859.github.io/theme.css';
-head.appendChild(link);
-
-
-document.getElementsByClassName("links").style["color"] = "orange";
+ 
 // Serch Web Archive
 //htmlcode =  "javascript:(function(){window.location='http://web.archive.org/web/*/' + document.URL})()' > Web Archive</a></ul>" ;
 
@@ -336,7 +323,7 @@ function dragElement(elmnt) {
     document.onmouseup = null;
     document.onmousemove = null;
   }
-};
+}
 
 //==================
 add_label("Inspect Element");
