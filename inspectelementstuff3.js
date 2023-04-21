@@ -246,7 +246,6 @@ panelbar.id = "InjectorPanel bar";
 panelbar.className = "panelbar";
 panelbar.style.height = "20px";
 panelbar.style["z-index"] = 10e5;
-panelbar.onclick = hide_panel ;
 panelbar.style.cursor = "move";
 
 subpanel = create_tag("div");
@@ -389,6 +388,3 @@ subpanel.appendChild(UL);
 subpan2.appendChild(UL2);
 subpan3.appendChild(UL3);
 subpan4.appendChild(UL4);
-hide_subpanel();
-hide_subpanel2();
-hide_subpanel3();
