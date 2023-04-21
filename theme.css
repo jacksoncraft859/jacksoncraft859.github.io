@@ -19,15 +19,11 @@
 }
 
 .links {
+  display: block;
   color: "orange";
 }
 
 .panelbar {
-  background-color: "orange";
-  color: "white";
-}
-
-#InjectorPanel bar{
   background-color: "orange";
   color: "white";
 }
