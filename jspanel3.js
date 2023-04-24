@@ -412,14 +412,12 @@ function dragElement(elmnt) {
 
 //==================
 add_label("Tests")
-add_mark("Show Theme Panel", hide_panel1);
-add_label1("Theme Panel");
-add_mark1("Blue Theme", change_theme_blue);
-add_mark1("Default Theme", change_theme_orange);
-add_mark1("Green Theme", change_theme_green);
-add_mark1("Red Theme", change_theme_red);
-add_mark1("Pink Theme", change_theme_pink);
-add_mark1("Yellow Theme,"change_theme_yellow);
+add_mark("Blue Theme", change_theme_blue);
+add_mark("Default Theme", change_theme_orange);
+add_mark("Green Theme", change_theme_green);
+add_mark("Red Theme", change_theme_red);
+add_mark("Pink Theme", change_theme_pink);
+add_mark("Yellow Theme,"change_theme_yellow);
 add_label("Inspect Element");
 add_mark("Show Inspect panel", hide_subpanel);
 add_sublabel("Inspect");
@@ -480,11 +478,9 @@ add_mark("Tab Cloaking", "javascript:document.title=prompt('Welcome to the Tab C
 add_mark("Close", remove_panel);
 
 subpanel.appendChild(UL);
-subpanel1.appendChild(UL5);
 subpan2.appendChild(UL2);
 subpan3.appendChild(UL3);
 subpan4.appendChild(UL4);
-hide_panel1();
 hide_subpanel();
 hide_subpanel2();
 hide_subpanel3();
