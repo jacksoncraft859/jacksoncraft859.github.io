@@ -49,7 +49,7 @@ function add_mark(label, url, onclick){
   var a = hyperlink(label, url, onclick);
   
   a.style.display = "block" ;
-  a.style["color"] = "gray" ;
+  a.style["color"] = "silver" ;
   il.appendChild(a) ;
   UL.appendChild(il);
   
@@ -60,7 +60,7 @@ function add_submark(label, url, onclick){
   var a = hyperlink(label, url, onclick);
   
   a.style.display = "block" ;
-  a.style["color"] = "gray" ;
+  a.style["color"] = "silver" ;
   il.appendChild(a) ;
   UL2.appendChild(il);
   
@@ -71,7 +71,7 @@ function add_submark2(label, url, onclick){
   var a = hyperlink(label, url, onclick);
   
   a.style.display = "block" ;
-  a.style["color"] = "gray" ;
+  a.style["color"] = "silver" ;
   il.appendChild(a) ;
   UL3.appendChild(il);
   
@@ -82,7 +82,7 @@ function add_submark3(label, url, onclick){
   var a = hyperlink(label, url, onclick);
   
   a.style.display = "block" ;
-  a.style["color"] = "gray" ;
+  a.style["color"] = "silver" ;
   il.appendChild(a) ;
   UL4.appendChild(il);
   
