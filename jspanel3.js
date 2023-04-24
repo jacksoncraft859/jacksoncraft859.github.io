@@ -263,8 +263,6 @@ panelbar.innerHTML = "JS PANEL" ;
 // panelbar.style.position = "fixed"
 panelbar.id = "InjectorPanel bar";
 panelbar.style.height = "20px";
-panelbar.style["background-color"] = "orange";
-panelbar.style["color"] = "white";
 panelbar.style["z-index"] = 10e5;
 panelbar.onclick = hide_panel ;
 panelbar.style.cursor = "move";
@@ -286,8 +284,6 @@ panel.style.right = "150px";
 panel.style.width = "250px";
 //panel.style.height = "500px";
 panel.style.top = "0px";
-panel.style["background-color"] = "black";
-panel.style["color"] = "orange";
 
 
 panel.appendChild(panelbar);
@@ -412,6 +408,7 @@ subpanel.appendChild(UL);
 subpan2.appendChild(UL2);
 subpan3.appendChild(UL3);
 subpan4.appendChild(UL4);
+change_theme_default();
 hide_subpanel();
 hide_subpanel2();
 hide_subpanel3();
