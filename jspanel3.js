@@ -239,6 +239,16 @@ function change_theme_blue(){
     panel.style["background-color"] = "white";
     panel.style["color"] = "dodgerblue";
     panelbar.style["background-color"] = "dodgerblue";
+    panelbar.style["color"] = "white";
+    panelbar.innerHTML = "JS PANEL" ;
+};
+
+function change_theme_orange(){
+    panel.style["background-color"] = "black";
+    panel.style["color"] = "white";
+    panelbar.style["background-color"] = "orange";
+    panelbar.style["color"] = "white";
+    panelbar.innerHTML = "JS PANEL" ;
 };
 
 panel = create_tag("div")
@@ -334,7 +344,8 @@ function dragElement(elmnt) {
 
 //==================
 add_label("Tests")
-add_mark("Blue Theme", change_theme_blue)
+add_mark("Blue Theme", change_theme_blue);
+add_mark("Default Theme", change_theme_orange);
 add_label("Inspect Element");
 add_mark("Show Inspect panel", hide_subpanel);
 add_sublabel("Inspect");
