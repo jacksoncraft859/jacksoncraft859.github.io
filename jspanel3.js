@@ -44,10 +44,6 @@ UL4 = create_tag("ul");
 UL4.className = "bookmarklets" ;
 UL4.style="list-style-type:disc";
 
-UL5 = create_tag("ul");
-UL5.className = "bookmarklets" ;
-UL5.style="list-style-type:disc";
-
 function add_mark(label, url, onclick){
   var il = create_tag("il");
   var a = hyperlink(label, url, onclick);
@@ -56,17 +52,6 @@ function add_mark(label, url, onclick){
   a.style["color"] = "gray" ;
   il.appendChild(a) ;
   UL.appendChild(il);
-  
-};
-
-function add_mark1(label, url, onclick){
-  var il = create_tag("il");
-  var a = hyperlink(label, url, onclick);
-  
-  a.style.display = "block" ;
-  a.style["color"] = "gray" ;
-  il.appendChild(a) ;
-  UL5.appendChild(il);
   
 };
 
@@ -109,15 +94,6 @@ function add_label(label){
   // t.style.display = "block" ;
   il.appendChild(t) ;
   UL.appendChild(il);
-  
-};
-
-function add_label1(label){
-  var il = create_tag("il");
-  var t = create_text(label);
-  // t.style.display = "block" ;
-  il.appendChild(t) ;
-  UL5.appendChild(il);
   
 };
 
@@ -332,9 +308,6 @@ panelbar.style.cursor = "move";
 
 subpanel = create_tag("div")
 
-subpanel1 = create_tag("div")
-subpanel1.id = "subpanels";
-
 subpan2 = create_tag("div")
 subpan2.id = "subpanels";
 
@@ -356,7 +329,6 @@ panel.style["color"] = "white";
 
 panel.appendChild(panelbar);
 panel.appendChild(subpanel);
-panel.appendChild(subpanel1);
 panel.appendChild(subpan2);
 panel.appendChild(subpan3);
 panel.appendChild(subpan4);
