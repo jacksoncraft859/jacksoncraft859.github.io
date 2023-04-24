@@ -386,10 +386,6 @@ function dragElement(elmnt) {
 add_label("Tests")
 add_mark("Blue Theme", change_theme_blue);
 add_mark("Default Theme", change_theme_orange);
-add_mark("Green Theme", change_theme_green);
-add_mark("Red Theme", change_theme_red);
-add_mark("Pink Theme", change_theme_pink);
-add_mark("Yellow Theme,"change_theme_yellow);
 add_label("Inspect Element");
 add_mark("Show Inspect panel", hide_subpanel);
 add_sublabel("Inspect");
