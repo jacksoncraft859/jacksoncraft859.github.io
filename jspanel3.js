@@ -44,6 +44,10 @@ UL4 = create_tag("ul");
 UL4.className = "bookmarklets" ;
 UL4.style="list-style-type:disc";
 
+UL5 = create_tag("ul");
+UL5.className = "bookmarklets" ;
+UL5.style="list-style-type:disc";
+
 function add_mark(label, url, onclick){
   var il = create_tag("il");
   var a = hyperlink(label, url, onclick);
@@ -52,6 +56,17 @@ function add_mark(label, url, onclick){
   a.style["color"] = "gray" ;
   il.appendChild(a) ;
   UL.appendChild(il);
+  
+};
+
+function add_mark1(label, url, onclick){
+  var il = create_tag("il");
+  var a = hyperlink(label, url, onclick);
+  
+  a.style.display = "block" ;
+  a.style["color"] = "gray" ;
+  il.appendChild(a) ;
+  UL5.appendChild(il);
   
 };
 
@@ -94,6 +109,15 @@ function add_label(label){
   // t.style.display = "block" ;
   il.appendChild(t) ;
   UL.appendChild(il);
+  
+};
+
+function add_label1(label){
+  var il = create_tag("il");
+  var t = create_text(label);
+  // t.style.display = "block" ;
+  il.appendChild(t) ;
+  UL5.appendChild(il);
   
 };
 
@@ -211,6 +235,14 @@ function hide_panel(){
     }
 };
 
+function hide_panel1(){
+    if (subpanel1.hidden == false){
+        subpanel1.hidden = true;
+    }else{
+        subpanel1.hidden = false;
+    }
+};
+
 function hide_subpanel(){
     if (subpan2.hidden == false){
         subpan2.hidden = true;
@@ -245,8 +277,40 @@ function change_theme_blue(){
 
 function change_theme_orange(){
     panel.style["background-color"] = "black";
-    panel.style["color"] = "white";
+    panel.style["color"] = "orange";
     panelbar.style["background-color"] = "orange";
+    panelbar.style["color"] = "white";
+    panelbar.innerHTML = "JS PANEL" ;
+};
+
+function change_theme_green(){
+    panel.style["background-color"] = "white";
+    panel.style["color"] = "lightgreen";
+    panelbar.style["background-color"] = "lightgreen";
+    panelbar.style["color"] = "white";
+    panelbar.innerHTML = "JS PANEL" ;
+};
+
+function change_theme_red(){
+    panel.style["background-color"] = "black";
+    panel.style["color"] = "darkred";
+    panelbar.style["background-color"] = "darkred";
+    panelbar.style["color"] = "white";
+    panelbar.innerHTML = "JS PANEL" ;
+};
+
+function change_theme_pink(){
+    panel.style["background-color"] = "white";
+    panel.style["color"] = "hotpink";
+    panelbar.style["background-color"] = "hotpink";
+    panelbar.style["color"] = "white";
+    panelbar.innerHTML = "JS PANEL" ;
+};
+
+function change_theme_yellow(){
+    panel.style["background-color"] = "black";
+    panel.style["color"] = "gold";
+    panelbar.style["background-color"] = "gold";
     panelbar.style["color"] = "white";
     panelbar.innerHTML = "JS PANEL" ;
 };
@@ -267,6 +331,9 @@ panelbar.onclick = hide_panel ;
 panelbar.style.cursor = "move";
 
 subpanel = create_tag("div")
+
+subpanel1 = create_tag("div")
+subpanel1.id = "subpanels";
 
 subpan2 = create_tag("div")
 subpan2.id = "subpanels";
@@ -289,6 +356,7 @@ panel.style["color"] = "white";
 
 panel.appendChild(panelbar);
 panel.appendChild(subpanel);
+panel.appendChild(subpanel1);
 panel.appendChild(subpan2);
 panel.appendChild(subpan3);
 panel.appendChild(subpan4);
@@ -344,8 +412,14 @@ function dragElement(elmnt) {
 
 //==================
 add_label("Tests")
-add_mark("Blue Theme", change_theme_blue);
-add_mark("Default Theme", change_theme_orange);
+add_mark("Show Theme Panel", hide_panel1);
+add_label1("Theme Panel");
+add_mark1("Blue Theme", change_theme_blue);
+add_mark1("Default Theme", change_theme_orange);
+add_mark1("Green Theme", change_theme_green);
+add_mark1("Red Theme", change_theme_red);
+add_mark1("Pink Theme", change_theme_pink);
+add_mark1("Yellow Theme,"change_theme_yellow);
 add_label("Inspect Element");
 add_mark("Show Inspect panel", hide_subpanel);
 add_sublabel("Inspect");
@@ -406,9 +480,11 @@ add_mark("Tab Cloaking", "javascript:document.title=prompt('Welcome to the Tab C
 add_mark("Close", remove_panel);
 
 subpanel.appendChild(UL);
+subpanel1.appendChild(UL5);
 subpan2.appendChild(UL2);
 subpan3.appendChild(UL3);
 subpan4.appendChild(UL4);
+hide_panel1();
 hide_subpanel();
 hide_subpanel2();
 hide_subpanel3();
