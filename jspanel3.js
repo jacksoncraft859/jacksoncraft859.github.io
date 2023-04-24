@@ -383,7 +383,7 @@ function dragElement(elmnt) {
 }
 
 //==================
-add_label("Tests")
+add_label("Themes")
 add_mark("Blue Theme", change_theme_blue);
 add_mark("Default Theme", change_theme_orange);
 add_mark("Green Theme", change_theme_green);
