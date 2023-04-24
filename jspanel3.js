@@ -244,6 +244,15 @@ function change_theme_blue(){
     panel.style["color"] = "dodgerblue";
     panelbar.style["background-color"] = "dodgerblue";
     panel.style["color"] = "white";
+    document.getElementsByClassName("links").style["color"] = "dodgerblue";
+};
+
+function chnage_theme_default(){
+    panelbar.style["background-color"] = "orange";
+    panelbar.style["color"] = "white";
+    panel.style["background-color"] = "black";
+    panel.style["color"] = "orange";
+    document.getElementsByClassName("links").style["color"] = "orange";
 };
 
 panel = create_tag("div")
@@ -277,10 +286,12 @@ panel.id = "InjectorPanel";
 panel.style.position = "absolute";
 panel.style.right = "150px";
 panel.style.width = "250px";
-panel.style["background-color"] = "black";
-panel.style["color"] = "white";
 //panel.style.height = "500px";
 panel.style.top = "0px";
+panel.style["background-color"] = "black";
+panel.style["color"] = "orange";
+
+document.getElementsByClassName("links").style["color"] = "orange";
 
 
 panel.appendChild(panelbar);
@@ -405,7 +416,6 @@ subpanel.appendChild(UL);
 subpan2.appendChild(UL2);
 subpan3.appendChild(UL3);
 subpan4.appendChild(UL4);
-change_theme_default();
 hide_subpanel();
 hide_subpanel2();
 hide_subpanel3();
