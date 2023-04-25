@@ -32,7 +32,7 @@ USHUL = create_tag("ul");
 USHUL.className = "bookmarklets" ;
 USHUL.style="list-style-type:disc";
 
-function add_mark(label, url, onclick){
+function add_umark(label, url, onclick){
   var il = create_tag("il");
   var a = hyperlink(label, url, onclick);
   
@@ -42,7 +42,7 @@ function add_mark(label, url, onclick){
   
 };
 
-function add_label(label){
+function add_uulabel(label){
   var il = create_tag("il");
   var t = create_text(label);
   // t.style.display = "block" ;
@@ -148,6 +148,6 @@ ush.appendChild(subush);
 document.querySelector("body").appendChild(ush);
 
 subush.innerHTML = $ush ;
-add_mark("Close", remove_ush);
+add_umark("Close", remove_ush);
 
 subush.appendChild(USHUL);
