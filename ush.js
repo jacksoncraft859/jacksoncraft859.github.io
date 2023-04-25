@@ -133,7 +133,6 @@ subush = create_tag("div")
 ush.id = "UltrishellPanel";
 ush.style.position = "absolute";
 ush.style.width = "600px";
-ush.style.height = "470px";
 //panel.style.height = "500px";
 ush.style.top = "0px";
 ush.style.right = "300px";
