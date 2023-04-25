@@ -28,9 +28,9 @@ function hyperlink(label, url, onclick){
     return a;
 };
 
-UL = create_tag("ul");
-UL.className = "bookmarklets" ;
-UL.style="list-style-type:disc";
+USHUL = create_tag("ul");
+USHUL.className = "bookmarklets" ;
+USHUL.style="list-style-type:disc";
 
 function add_mark(label, url, onclick){
   var il = create_tag("il");
@@ -38,7 +38,7 @@ function add_mark(label, url, onclick){
   
   a.style.display = "block" ;
   il.appendChild(a) ;
-  UL.appendChild(il);
+ USHUL.appendChild(il);
   
 };
 
@@ -47,7 +47,7 @@ function add_label(label){
   var t = create_text(label);
   // t.style.display = "block" ;
   il.appendChild(t) ;
-  UL.appendChild(il);
+  USHUL.appendChild(il);
   
 };
 
@@ -150,4 +150,4 @@ document.querySelector("body").appendChild(ush);
 subush.innerHTML = $ush ;
 add_mark("Close", remove_ush);
 
-subush.appendChild(UL);
+subush.appendChild(USHUL);
