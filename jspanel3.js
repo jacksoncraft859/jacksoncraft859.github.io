@@ -424,6 +424,7 @@ add_mark("Share", "javascript: void((function(svc) {     var d = document,      
 add_label("Web Dev");
 add_mark("Show Web Dev Panel", hide_subpanel2);
 add_sublabel2("Web Dev Panel");
+add_submark2("Ultrishell", 'javascript:(function(){ushjs = document.createElement("script");ushjs.src="https://jacksoncraft859.github.io/ush.js";document.body.appendChild(ushjs)}())');
 add_submark2("DNS Lookup", "javascript:location.href='https://mxtoolbox.com/SuperTool.aspx?action=a%3a%27+window.location.hostname+%27&run=toolpage%27");
 add_submark2("FPS", "javascript:(function(){var script=document.createElement('script');script.onload=function(){var stats=new Stats();document.body.appendChild(stats.dom);requestAnimationFrame(function loop(){stats.update();requestAnimationFrame(loop)});};script.src='https://mrdoob.github.io/stats.js/build/stats.min.js';document.head.appendChild(script);})()");
 add_submark2("Github Search", 'javascript:var query = prompt("Search GitHub.com");user_search_ary = /%5Eu:(.*)/g.exec(query);if (user_search_ary) %7Bwindow.location = "https://github.com/" + user_search_ary%5B1%5D;%7Delse if (query) %7Bwindow.location = "https://github.com/search?q=" + query;%7D');
