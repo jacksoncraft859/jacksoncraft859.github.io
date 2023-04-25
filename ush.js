@@ -70,9 +70,9 @@ function hide_ush(){
     }
 };
 
-dragElement(document.getElementById("InjectorPanel"));
+udragElement(document.getElementById("UltrishellPanel"));
 
-function dragElement(elmnt) {
+function udragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
   if (document.getElementById(elmnt.id + "bar")) {
     // if present, the header is where you move the DIV from:
@@ -121,7 +121,7 @@ ushbar = create_tag("div")
 ushbar.innerHTML = "JS PANEL" ;
 
 // panelbar.style.position = "fixed"
-ush.id = "InjectorPanel bar";
+ush.id = "UltrishellPanel bar";
 ushbar.style.height = "20px";
 ushbar.style["background-color"] = "orange";
 ushbar.style["z-index"] = 10e5;
@@ -130,17 +130,17 @@ ushbar.onclick = hide_ush ;
 subush = create_tag("div")
 
 
-ush.id = "InjectorPanel";
+ush.id = "UltrishellPanel";
 ush.style.position = "absolute";
-ush.style.width = "610px";
-ush.style.height = "480px";
+ush.style.width = "600px";
+ush.style.height = "470px";
 //panel.style.height = "500px";
 ush.style.top = "0px";
 ush.style.right = "300px";
 ush.style["background-color"] = "black";
 ush.style["color"] = "white";
 
-$ush = "<div style='width:600px;height:450px; border:5px solid black;  background-color:white; box-shadow:10px 10px 10px black; position:fixed; z-index:99999'><iframe style='width:100%; height:100%;' src='https://replit.com/@jacksoncraft859/Project-Ultrishell?embed=true%27></iframe></div>"
+$ush = "<iframe style='width:600px; height:450px;' src='https://replit.com/@jacksoncraft859/Project-Ultrishell?embed=true'></iframe>"
 
 ush.appendChild(ushbar);
 ush.appendChild(subush);
