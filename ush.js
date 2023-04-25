@@ -58,11 +58,11 @@ function func2JSurl(func){
 };  
 
 
-function remove_panel(){
+function remove_ushl(){
     ush.remove();
 };
 
-function hide_panel(){
+function hide_ush(){
     if (subush.hidden == false){
         subush.hidden = true;
     }else{
@@ -125,7 +125,7 @@ ush.id = "InjectorPanel bar";
 ushbar.style.height = "20px";
 ushbar.style["background-color"] = "orange";
 ushbar.style["z-index"] = 10e5;
-ushbar.onclick = hide_panel ;
+ushbar.onclick = hide_ush ;
 
 subush = create_tag("div")
 
@@ -148,6 +148,6 @@ ush.appendChild(subush);
 document.querySelector("body").appendChild(ush);
 
 subush.innerHTML = $ush ;
-add_mark("Close", remove_panel);
+add_mark("Close", remove_ush);
 
 subush.appendChild(UL);
