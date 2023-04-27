@@ -299,6 +299,14 @@ function change_theme_im(){
     panel.style["color"] = "gold";
 };
 
+function change_theme_hack(){
+    panel.style["color"] = "green";
+    panel.style["background-color"] = "black";
+    panelbar.style["background-color"] = "green";
+    panelbar.style["color"] = "white";
+    panelbar.innerHTML = "JS PANEL";
+};
+
 panel = create_tag("div")
 
 panelbar = create_tag("div")
@@ -399,6 +407,7 @@ add_mark("Red Theme", change_theme_red);
 add_mark("Pink Theme", change_theme_pink);
 add_mark("Yellow Theme", change_theme_yellow);
 add_mark("Iron Man Theme", change_theme_im);
+add_mark("Hacker Theme", change_theme_hack);
 add_label("Inspect Element");
 add_mark("Show Inspect panel", hide_subpanel);
 add_sublabel("Inspect");
