@@ -295,8 +295,8 @@ function change_theme_im(){
     panelbar.style["color"] = "gold";
     panelbar.style["background-color"] = "darkred";
     panelbar.innerHTML = "JS PANEL";
-    panel.style["background-color"] = "gold";
-    panel.style["color"] = "black";
+    panel.style["background-color"] = "darkred";
+    panel.style["color"] = "gold";
 };
 
 panel = create_tag("div")
