@@ -301,7 +301,7 @@ function dragElement(elmnt) {
     document.onmouseup = null;
     document.onmousemove = null;
   }
-}
+};
 
 //==================
 add_vlabel("JS PANEL VERSION MANAGERs");
