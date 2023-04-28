@@ -14,7 +14,6 @@ function create_text(text){
 
 function hyperlink(label, url, onclick){
     var a = create_tag("a") ;
-    //a.href = url ;
     a.innerHTML = label;
     
     if (typeof url == "function"){
@@ -24,7 +23,6 @@ function hyperlink(label, url, onclick){
         a.href = url ;
     };
         
-    //if(onclick !=undefined) a.onclick = onclick ;
     return a;
 };
 
@@ -91,7 +89,6 @@ function add_submark3(label, url, onclick){
 function add_label(label){
   var il = create_tag("il");
   var t = create_text(label);
-  // t.style.display = "block" ;
   il.appendChild(t) ;
   UL.appendChild(il);
   
@@ -100,7 +97,6 @@ function add_label(label){
 function add_sublabel(label){
   var il = create_tag("il");
   var t = create_text(label);
-  // t.style.display = "block" ;
   il.appendChild(t) ;
   UL2.appendChild(il);
   
@@ -109,7 +105,6 @@ function add_sublabel(label){
 function add_sublabel2(label){
   var il = create_tag("il");
   var t = create_text(label);
-  // t.style.display = "block" ;
   il.appendChild(t) ;
   UL3.appendChild(il);
   
@@ -118,7 +113,6 @@ function add_sublabel2(label){
 function add_sublabel3(label){
   var il = create_tag("il");
   var t = create_text(label);
-  // t.style.display = "block" ;
   il.appendChild(t) ;
   UL4.appendChild(il);
   
@@ -130,9 +124,6 @@ function func2JSurl(func){
     return url ;
 };  
 
-
-//--------------------------------------------------------------------//
-
 function showAllLinks(){
     var a = '';
     for (var ln = 0; ln < document.links.length; ln++) {
@@ -141,11 +132,9 @@ function showAllLinks(){
     };
     w = window.open('', 'Links', 'scrollbars,resizable,width=400,height=600');
     w.document.write(a);    
-    //w.document.body.innerHTML = a ;
 };
 
 function fullUrls() {
-/* Changes the text of links to match their absolute urls. */
     var i, c, x, h;
     for (i = 0; x = document.links[i]; ++i) {
         h = x.href;
@@ -157,8 +146,6 @@ function fullUrls() {
  
 };
 
-
-/* Credits: http://www.xinotes.net/notes/note/219/ */
 function ShowCookies(){
 
      if (!window.hhhgewrt34frdki) {
@@ -310,7 +297,7 @@ function change_theme_hack(){
 function launchvm(){
     vm = create_tag("script");
     vm.type = "text/javascript";
-    vm.setAttribute("src", "https://jacksoncraft859.github.io/versionmanager.js");
+    vm.setAttribute("src", "jacksoncraft859.github.io/versionmanager.js");
     document.querySelector("body").appendChild(vm);
     remove_panel();
 };
@@ -319,7 +306,6 @@ panel = create_tag("div")
 
 panelbar = create_tag("div")
 
-//panelbar.innerHTML = "<a href='#' onclick='hide_panel()' id='panel_switch' >Hide Panel<a>"
 panelbar.innerHTML = "JS PANEL" ;
 
 // panelbar.style.position = "fixed"
