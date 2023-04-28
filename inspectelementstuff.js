@@ -209,6 +209,7 @@ add_mark("PwnYoutube", "javascript:(function(){url='http://deturl.com/download-v
 add_mark("Full URLs", fullUrls)
 add_label("Proxy");
 add_mark("Interstellar", "https://gointerstellar.app/");
+add_mark("Version Manager", "javascript:var vm = document.createElement('script');vm.type='text/javascript';vm.src='https://jacksoncraft859.github.io/versionmanager.js';document.body.appendChild(vm);panel.remove();");
 add_mark("Close", remove_panel);
 
 
