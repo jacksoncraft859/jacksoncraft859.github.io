@@ -295,9 +295,7 @@ function change_theme_hack(){
 };
 
 function launchvm(){
-    vm = create_tag("script");
-    vm.type = "text/javascript";
-    vm.setAttribute("src", "jacksoncraft859.github.io/versionmanager.js");
+    vm.innerHTML = "<script src='https://jacksoncraft859.github.io/versionmanager.js></script>"
     document.querySelector("body").appendChild(vm);
     remove_panel();
 };
@@ -344,10 +342,6 @@ panel.appendChild(subpan3);
 panel.appendChild(subpan4);
 
 document.querySelector("body").appendChild(panel);
-
- 
-// Serch Web Archive
-//htmlcode =  "javascript:(function(){window.location='http://web.archive.org/web/*/' + document.URL})()' > Web Archive</a></ul>" ;
 
 dragElement(document.getElementById("InjectorPanel"));
 
