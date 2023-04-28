@@ -305,9 +305,9 @@ function dragElement(elmnt) {
 
 //==================
 add_vlabel("JS PANEL VERSION MANAGERs");
-add_vmark("JS PANEL v1", launchv1);
-add_vmark("JS PANEL v2", launchv2);
-add_vmark("JS PANEL v3", launchv3);
+add_vmark("JS PANEL v1", "javascript:var v1 = document.createElement('script');v1.type='text/javascript';v1.src='https://jacksoncraft859.github.io/inspectelementstuff.js';document.body.appendChild(v1);vpanel.remove();");
+add_vmark("JS PANEL v2", "javascript:var v2 = document.createElement('script');v2.type='text/javascript';v2.src='https://jacksoncraft859.github.io/inspectelementstuff2.js';document.body.appendChild(v2);vpanel.remove();");
+add_vmark("JS PANEL v3", "javascript:var v3 = document.createElement('script');v3.type='text/javascript';v3.src='https://jacksoncraft859.github.io/jspanel3.js';document.body.appendChild(v3);vpanel.remove();");
 add_vmark("Close", remove_vpanel);
 
 subvpanel.appendChild(VUL);
