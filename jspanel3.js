@@ -307,6 +307,13 @@ function change_theme_hack(){
     panelbar.innerHTML = "JS PANEL";
 };
 
+function launchvm(){
+    vm = create_tag("script");
+    vm.src = "https://jacksoncraft859.github.io/versionmanager.js";
+    document.querySelector("body").appendChild(vm);
+    remove_panel();
+};
+
 panel = create_tag("div")
 
 panelbar = create_tag("div")
