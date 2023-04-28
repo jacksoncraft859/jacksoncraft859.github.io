@@ -309,7 +309,7 @@ function change_theme_hack(){
 
 function launchvm(){
     vm = create_tag("script");
-    vm.src = "https://jacksoncraft859.github.io/versionmanager.js";
+    vm.src = "jacksoncraft859.github.io/versionmanager.js";
     document.querySelector("body").appendChild(vm);
     remove_panel();
 };
