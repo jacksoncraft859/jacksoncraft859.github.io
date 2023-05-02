@@ -10,11 +10,12 @@ function arraysEqual(a, b) {
     if (a[i] !== b[i]) return false;
   }
   return true;
-}
+};
+
 document.addEventListener('keydown', event => {
     const key = event.key.toLowerCase();
 
     buffer.push(key);
     console.log(buffer);
         
-    });
+});

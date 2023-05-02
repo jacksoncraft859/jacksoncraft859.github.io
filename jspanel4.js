@@ -224,6 +224,67 @@ function hide_subpanel3(){
     }
 };
 
+const konami = [
+    "ArrowUp",
+    "ArrowUp",
+    "ArrowDown",
+    "ArrowDown",
+    "ArrowLeft",
+    "ArrowRight",
+    "ArrowLeft",
+    "ArrowRight",
+  ];
+  const konamiTouch = ["u", "u", "d", "d", "l", "r", "l", "r"];
+  let konamiProgress = 0;
+  let canFinishTimeout;
+  window.addEventListener("keydown", (e) => {
+    if (e.key === konami[konamiProgress]) {
+      konamiProgress++;
+      if (konamiProgress === 1) {
+        canFinishTimeout = setTimeout(() => {
+          konamiProgress = 0;
+        }, 5000);
+      }
+      if (konamiProgress === 8) {
+        console.log('success');
+        konamiProgress = 0;
+        clearTimeout(canFinishTimeout);
+      }
+    } else {
+      konamiProgress = 0;
+      clearTimeout(canFinishTimeout);
+    }
+  });
+  window.addEventListener("touchstart", (e) => {
+    function getKonamiTouch(touch) {
+      if (konamiTouch[konamiProgress] === "u") {
+        if (touch.clientY < window.innerHeight / 2) return true;
+      } else if (konamiTouch[konamiProgress] === "d") {
+        if (touch.clientY > window.innerHeight / 2) return true;
+      } else if (konamiTouch[konamiProgress] === "l") {
+        if (touch.clientX < window.innerWidth / 2) return true;
+      } else if (konamiTouch[konamiProgress] === "r") {
+        if (touch.clientX > window.innerWidth / 2) return true;
+      }
+    }
+    if (getKonamiTouch(e.touches[0])) {
+      konamiProgress++;
+      if (konamiProgress === 1) {
+        canFinishTimeout = setTimeout(() => {
+          konamiProgress = 0;
+        }, 5000);
+      }
+      if (konamiProgress === 8) {
+        console.log('success');
+        konamiProgress = 0;
+        clearTimeout(canFinishTimeout);
+      }
+    } else {
+      konamiProgress = 0;
+      clearTimeout(canFinishTimeout);
+    }
+  });
+
 function change_theme_blue(){
     panel.style["background-color"] = "white";
     panel.style["color"] = "dodgerblue";
