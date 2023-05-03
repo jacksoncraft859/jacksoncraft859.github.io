@@ -191,7 +191,7 @@ function hide_spanel(){
   }
 };
 
-SUL = create_tag("ul");
+SUL = create_tag("ul")
 SUL.className = "bookmarklets" ;
 SUL.style="list-style-type:disc";
 
@@ -279,16 +279,16 @@ window.addEventListener("keydown", (e) => {
       canFinishTimeout = setTimeout(() => {
         konamiProgress = 0;
       }, 5000);
-    }
+    };
     if (konamiProgress === 8) {
       secret_panel();
       konamiProgress = 0;
       clearTimeout(canFinishTimeout);
-    }
+    };
   } else {
     konamiProgress = 0;
     clearTimeout(canFinishTimeout);
-  }
+  };
 });
 window.addEventListener("touchstart", (e) => {
   function getKonamiTouch(touch) {
@@ -300,24 +300,24 @@ window.addEventListener("touchstart", (e) => {
       if (touch.clientX < window.innerWidth / 2) return true;
     } else if (konamiTouch[konamiProgress] === "r") {
       if (touch.clientX > window.innerWidth / 2) return true;
-    }
-  }
+    };
+  };
   if (getKonamiTouch(e.touches[0])) {
     konamiProgress++;
     if (konamiProgress === 1) {
       canFinishTimeout = setTimeout(() => {
         konamiProgress = 0;
       }, 5000);
-    }
+    };
     if (konamiProgress === 8) {
       console.log('success');
       konamiProgress = 0;
       clearTimeout(canFinishTimeout);
-    }
+    };
   } else {
     konamiProgress = 0;
     clearTimeout(canFinishTimeout);
-  }
+  };
 });
 
 function change_theme_blue(){
@@ -456,7 +456,7 @@ function secret_panel(){
     document.onmouseup = null;
     document.onmousemove = null;
     };
-  };
+  }
 };  
   
 panel = create_tag("div")
@@ -543,7 +543,7 @@ function dragElement(elmnt) {
     document.onmouseup = null;
     document.onmousemove = null;
   }
-}
+};
 
 //==================
 add_label("Themes")

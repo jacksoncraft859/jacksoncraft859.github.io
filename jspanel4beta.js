@@ -179,6 +179,40 @@ function ShowCookies(){
  };
 };
 
+function remove_spanel(){
+  secretpanel.remove();
+};
+
+function hide_spanel(){
+  if (secretsubpanel.hidden == false){
+    secretsubpanel.hidden = true;
+  }else{
+    secretsubpanel.hidden = false;
+  }
+};
+
+SUL = create_tag("ul");
+SUL.className = "bookmarklets" ;
+SUL.style="list-style-type:disc";
+
+function add_smark(label, url, onclick){
+  var il = create_tag("il");
+  var a = hyperlink(label, url, onclick);
+  
+  a.style.display = "block" ;
+  a.style["color"] = "silver" ;
+  il.appendChild(a) ;
+  SUL.appendChild(il);
+  
+};
+
+function add_slabel(label){
+  var il = create_tag("il");
+  var t = create_text(label);
+  il.appendChild(t) ;
+  SUL.appendChild(il);
+  
+};
 
 function remove_panel(){
     panel.remove();
@@ -223,6 +257,68 @@ function hide_subpanel3(){
         subpan4.hidden = false;
     }
 };
+
+
+const konami = [
+    "ArrowUp",
+    "ArrowUp",
+    "ArrowDown",
+    "ArrowDown",
+    "ArrowLeft",
+    "ArrowRight",
+    "ArrowLeft",
+    "ArrowRight",
+];
+const konamiTouch = ["u", "u", "d", "d", "l", "r", "l", "r"];
+let konamiProgress = 0;
+let canFinishTimeout;
+window.addEventListener("keydown", (e) => {
+  if (e.key === konami[konamiProgress]) {
+    konamiProgress++;
+    if (konamiProgress === 1) {
+      canFinishTimeout = setTimeout(() => {
+        konamiProgress = 0;
+      }, 5000);
+    }
+    if (konamiProgress === 8) {
+      secret_panel();
+      konamiProgress = 0;
+      clearTimeout(canFinishTimeout);
+    }
+  } else {
+    konamiProgress = 0;
+    clearTimeout(canFinishTimeout);
+  }
+});
+window.addEventListener("touchstart", (e) => {
+  function getKonamiTouch(touch) {
+    if (konamiTouch[konamiProgress] === "u") {
+      if (touch.clientY < window.innerHeight / 2) return true;
+    } else if (konamiTouch[konamiProgress] === "d") {
+      if (touch.clientY > window.innerHeight / 2) return true;
+    } else if (konamiTouch[konamiProgress] === "l") {
+      if (touch.clientX < window.innerWidth / 2) return true;
+    } else if (konamiTouch[konamiProgress] === "r") {
+      if (touch.clientX > window.innerWidth / 2) return true;
+    }
+  }
+  if (getKonamiTouch(e.touches[0])) {
+    konamiProgress++;
+    if (konamiProgress === 1) {
+      canFinishTimeout = setTimeout(() => {
+        konamiProgress = 0;
+      }, 5000);
+    }
+    if (konamiProgress === 8) {
+      console.log('success');
+      konamiProgress = 0;
+      clearTimeout(canFinishTimeout);
+    }
+  } else {
+    konamiProgress = 0;
+    clearTimeout(canFinishTimeout);
+  }
+});
 
 function change_theme_blue(){
     panel.style["background-color"] = "white";
@@ -296,6 +392,73 @@ function launchvm(){
     remove_panel();
 };
 
+function secret_panel(){
+  secretpanel = create_tag("div");
+  secretpanelbar = create_tag("div");
+  secretsubpanel = create_tag("div");
+  secretpanelbar.innerHTML = "SECRET JS PANEL";
+  secretpanel.id = "SECRETInjectorPanel";
+  secretpanelbar.id = "SECRETInjectorPanel bar";
+  secretpanelbar.style.height = "20px";
+  secretpanelbar.style["background-color"] = "orange";
+  secretpanelbar.style["z-index"] = 10e5;
+  secretpanelbar.onclick = hide_spanel ;
+  secretpanelbar.style.cursor = "move";
+  secretpanel.style.position = "absolute";
+  secretpanel.style.right = "150px";
+  secretpanel.style.width = "250px";
+  //panel.style.height = "500px";
+  secretpanel.style.top = "0px";
+  secretpanel.style["background-color"] = "black";
+  secretpanel.style["color"] = "white";
+
+  secretpanel.appendChild(secretpanelbar);
+  secretpanel.appendChild(secretsubpanel);
+  document.querySelector("body").appendChild(secretpanel);
+  
+  dragElement(document.getElementById("SECRETInjectorPanel"));
+  function dragElement(elmnt) {
+    var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+    if (document.getElementById(elmnt.id + "bar")) {
+      // if present, the header is where you move the DIV from:
+      document.getElementById(elmnt.id + "bar").onmousedown = dragMouseDown;
+    } else {
+    // otherwise, move the DIV from anywhere inside the DIV:
+      elmnt.onmousedown = dragMouseDown;
+    };
+
+    function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+    };
+
+    function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+    }
+
+    function closeDragElement() {
+    // stop moving when mouse button is released:
+    document.onmouseup = null;
+    document.onmousemove = null;
+    };
+  };
+};  
+  
 panel = create_tag("div")
 
 panelbar = create_tag("div")
@@ -452,6 +615,9 @@ add_mark("Interstellar", "https://goarmy.us.to/");
 add_mark("Tab Cloaking", "javascript:document.title=prompt('Welcome to the Tab Cloak setup!\n\nEnter the title you want to set for this tab::');var icon=document.querySelector(`link[rel='icon']`);if (!icon) {icon = document.createElement('link');icon.rel='icon';};switch(prompt('What icon would you like to use?\n\n[1] Google Search\n[2] Google Drive\n[3] Custom URL\n\nPlease only enter a number!%27)){case%271%27:icon.setAttribute(%27href%27,%27https://www.google.com/favicon.ico%27);break;case%272%27:icon.setAttribute(%27href%27,%27https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png%27);break;case%273%27:icon.setAttribute(%27href%27,prompt(%27Please enter the URL for the icon you want:%27));} document.head.appendChild(icon);");
 add_mark("Version Manager", "javascript:var vm = document.createElement('script');vm.type='text/javascript';vm.src='https://jacksoncraft859.github.io/versionmanager.js';document.body.appendChild(vm);panel.remove();");
 add_mark("Close", remove_panel);
+
+add_smark("Close", remove_spanel);
+secretsubpanel.appendChild(SUL);
 
 subpanel.appendChild(UL);
 subpan2.appendChild(UL2);
