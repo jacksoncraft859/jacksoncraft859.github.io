@@ -414,7 +414,6 @@ function secret_panel(){
 
   secretpanel.appendChild(secretpanelbar);
   secretpanel.appendChild(secretsubpanel);
-
   document.querySelector("body").appendChild(secretpanel);
   
   dragElement(document.getElementById("SECRETInjectorPanel"));
@@ -458,9 +457,7 @@ function secret_panel(){
     document.onmousemove = null;
     }
   };
-  $img = "<div><iframe style='width:250px;height:250px;' src='https://jacksoncraft859.github.io/img.html'></iframe></div>";
-  secretpanel.appendChild(secretpanelbar);
-  secretpanel.appendChild(secretsubpanel);
+
 
   add_smark("Close", remove_spanel);
   secretsubpanel.appendChild(SUL);
