@@ -413,8 +413,6 @@ function secret_panel(){
   secretpanel.style["color"] = "white";
 
   secretpanel.appendChild(secretpanelbar);
-  $img = "<iframe style='width:250px;height:250px;' src='https://jacksoncraft859.github.io/img.html'></iframe>";
-  secretsubpanel.appendChild($img);
   secretpanel.appendChild(secretsubpanel);
   document.querySelector("body").appendChild(secretpanel);
   
