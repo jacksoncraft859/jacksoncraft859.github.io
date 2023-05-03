@@ -179,41 +179,6 @@ function ShowCookies(){
  };
 };
 
-function remove_spanel(){
-  secretpanel.remove();
-};
-
-function hide_spanel(){
-  if (secretsubpanel.hidden == false){
-    secretsubpanel.hidden = true;
-  }else{
-    secretsubpanel.hidden = false;
-  }
-};
-
-SUL = create_tag("ul");
-SUL.className = "bookmarklets" ;
-SUL.style="list-style-type:disc";
-
-function add_smark(label, url, onclick){
-  var il = create_tag("il");
-  var a = hyperlink(label, url, onclick);
-  
-  a.style.display = "block" ;
-  a.style["color"] = "silver" ;
-  il.appendChild(a) ;
-  SUL.appendChild(il);
-  
-};
-
-function add_slabel(label){
-  var il = create_tag("il");
-  var t = create_text(label);
-  il.appendChild(t) ;
-  SUL.appendChild(il);
-  
-};
-
 function remove_panel(){
     panel.remove();
 };
@@ -393,6 +358,40 @@ function launchvm(){
 };
 
 function secret_panel(){
+  function remove_spanel(){
+    secretpanel.remove();
+  };
+  
+  function hide_spanel(){
+    if (secretsubpanel.hidden == false){
+      secretsubpanel.hidden = true;
+    }else{
+      secretsubpanel.hidden = false;
+    }
+  };
+  
+  SUL = create_tag("ul");
+  SUL.className = "bookmarklets" ;
+  SUL.style="list-style-type:disc";
+  
+  function add_smark(label, url, onclick){
+    var il = create_tag("il");
+    var a = hyperlink(label, url, onclick);
+    
+    a.style.display = "block" ;
+    a.style["color"] = "silver" ;
+    il.appendChild(a) ;
+    SUL.appendChild(il);
+    
+  };
+  
+  function add_slabel(label){
+    var il = create_tag("il");
+    var t = create_text(label);
+    il.appendChild(t) ;
+    SUL.appendChild(il);
+    
+  };
   secretpanel = create_tag("div");
   secretpanelbar = create_tag("div");
   secretpanelbar.innerHTML = "SECRET JS PANEL";
@@ -410,12 +409,6 @@ function secret_panel(){
   secretpanel.style.top = "0px";
   secretpanel.style["background-color"] = "black";
   secretpanel.style["color"] = "white";
-
-  secretsubpanel = create_tag("div");
-
-  secretpanel.appendChild(secretpanelbar);
-  secretpanel.appendChild(secretsubpanel);
-  document.querySelector("body").appendChild(secretpanel);
   
   dragElement(document.getElementById("SECRETInjectorPanel"));
   function dragElement(elmnt) {
@@ -457,7 +450,12 @@ function secret_panel(){
     document.onmouseup = null;
     document.onmousemove = null;
     };
-  }
+  };
+  secret_subpanel = create_tag("div");
+  secret_subpanel.id = "secretsubpanel";
+  secretpanel.appendChild(secretpanelbar);
+  secretpanel.appendChild(secret_subpanel);
+  document.querySelector("body").appendChild(secretpanel);
 };  
   
 panel = create_tag("div");
@@ -618,7 +616,7 @@ add_mark("Version Manager", "javascript:var vm = document.createElement('script'
 add_mark("Close", remove_panel);
 
 add_smark("Close", remove_spanel);
-secretsubpanel.appendChild(SUL);
+secretpanel.querySelector("#secretsubpanel").appendChild(SUL);
 
 subpanel.appendChild(UL);
 subpan2.appendChild(UL2);
