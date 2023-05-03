@@ -460,9 +460,9 @@ function secret_panel(){
   };
 };  
   
-panel = create_tag("div")
+panel = create_tag("div");
 
-panelbar = create_tag("div")
+panelbar = create_tag("div");
 
 panelbar.innerHTML = "JS PANEL" ;
 
@@ -474,15 +474,15 @@ panelbar.style["z-index"] = 10e5;
 panelbar.onclick = hide_panel ;
 panelbar.style.cursor = "move";
 
-subpanel = create_tag("div")
+subpanel = create_tag("div");
 
-subpan2 = create_tag("div")
+subpan2 = create_tag("div");
 subpan2.id = "subpanels";
 
-subpan3 = create_tag("div")
+subpan3 = create_tag("div");
 subpan3.id = "subpanels";
 
-subpan4 = create_tag("div")
+subpan4 = create_tag("div");
 subpan4.id = "subpanels";
 
 panel.id = "InjectorPanel";
