@@ -416,8 +416,8 @@ function secret_panel(){
   iframe = document.createElement("iframe");
   iframe.style.width = "250px";
   iframe.src = "https://jacksoncraft859.github.io/img2.html";
-  document.getElementById("SECRETInjectorPanel").querySelector("#secretsubpanel").appendChild(iframe);
-  document.getElementById("SECRETInjectorPanel").querySelector("#secretsubpanel").appendChild(SUL);
+  document.querySelector("#secretsubpanel").appendChild(iframe);
+  document.querySelector("#secretsubpanel").appendChild(SUL);
 
   document.getElementById("SECRETInjectorPanel").appendChild(secretpanelbar);
   document.getElementById("SECRETInjectorPanel").appendChild(secret_subpanel);
