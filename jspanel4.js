@@ -191,7 +191,7 @@ function hide_spanel(){
   }
 };
 
-SUL = create_tag("ul")
+SUL = create_tag("ul");
 SUL.className = "bookmarklets" ;
 SUL.style="list-style-type:disc";
 
