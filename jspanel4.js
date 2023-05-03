@@ -414,7 +414,6 @@ function secret_panel(){
 
   secretpanel.appendChild(secretpanelbar);
   secretpanel.appendChild(secretsubpanel);
-
   document.querySelector("body").appendChild(secretpanel);
   
   dragElement(document.getElementById("SECRETInjectorPanel"));
@@ -460,9 +459,9 @@ function secret_panel(){
   };
 };  
   
-panel = create_tag("div");
+panel = create_tag("div")
 
-panelbar = create_tag("div");
+panelbar = create_tag("div")
 
 panelbar.innerHTML = "JS PANEL" ;
 
@@ -474,15 +473,15 @@ panelbar.style["z-index"] = 10e5;
 panelbar.onclick = hide_panel ;
 panelbar.style.cursor = "move";
 
-subpanel = create_tag("div");
+subpanel = create_tag("div")
 
-subpan2 = create_tag("div");
+subpan2 = create_tag("div")
 subpan2.id = "subpanels";
 
-subpan3 = create_tag("div");
+subpan3 = create_tag("div")
 subpan3.id = "subpanels";
 
-subpan4 = create_tag("div");
+subpan4 = create_tag("div")
 subpan4.id = "subpanels";
 
 panel.id = "InjectorPanel";
@@ -513,7 +512,7 @@ function dragElement(elmnt) {
   } else {
     // otherwise, move the DIV from anywhere inside the DIV:
     elmnt.onmousedown = dragMouseDown;
-  };
+  }
 
   function dragMouseDown(e) {
     e = e || window.event;
@@ -524,7 +523,7 @@ function dragElement(elmnt) {
     document.onmouseup = closeDragElement;
     // call a function whenever the cursor moves:
     document.onmousemove = elementDrag;
-  };
+  }
 
   function elementDrag(e) {
     e = e || window.event;
@@ -537,14 +536,14 @@ function dragElement(elmnt) {
     // set the element's new position:
     elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
     elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-  };
+  }
 
   function closeDragElement() {
     // stop moving when mouse button is released:
     document.onmouseup = null;
     document.onmousemove = null;
   }
-};
+}
 
 //==================
 add_label("Themes")
@@ -604,7 +603,7 @@ add_submark2("Execute HTML", "javascript:var txt='';function getSelText(wndw){va
 add_submark2("Show Cookies", ShowCookies);
 add_submark2("Remove Cookies", "javascript:void(document.cookie=null)");
 add_submark2("PwnYoutube", "javascript:(function(){url='http://deturl.com/download-video.js';document.body.appendChild(document.createElement('script')).src=url+'?'+new Date().getTime();})();");
-add_submark2("Full URLs", fullUrls);
+add_submark2("Full URLs", fullUrls)
 add_label("Multitools and OS's");
 add_mark("OS.JS", "javascript:var os = document.createElement('script');os.type='text/javascript';os.src='https://jacksoncraft859.github.io/os-js.js';document.body.appendChild(os);");
 add_mark("SilveOS", "javascript:var silve = document.createElement('script');silve.type='text/javascript';silve.src='https://jacksoncraft859.github.io/silveos.js';document.body.appendChild(silve);");
