@@ -179,6 +179,40 @@ function ShowCookies(){
  };
 };
 
+function remove_spanel(){
+  secretpanel.remove();
+};
+
+function hide_spanel(){
+  if (secretsubpanel.hidden == false){
+    secretsubpanel.hidden = true;
+  }else{
+    secretsubpanel.hidden = false;
+  }
+};
+
+SUL = create_tag("ul");
+SUL.className = "bookmarklets" ;
+SUL.style="list-style-type:disc";
+
+function add_smark(label, url, onclick){
+  var il = create_tag("il");
+  var a = hyperlink(label, url, onclick);
+  
+  a.style.display = "block" ;
+  a.style["color"] = "silver" ;
+  il.appendChild(a) ;
+  SUL.appendChild(il);
+  
+};
+
+function add_slabel(label){
+  var il = create_tag("il");
+  var t = create_text(label);
+  il.appendChild(t) ;
+  SUL.appendChild(il);
+  
+};
 
 function remove_panel(){
     panel.remove();
@@ -377,41 +411,6 @@ function secret_panel(){
   secretpanel.style.top = "0px";
   secretpanel.style["background-color"] = "black";
   secretpanel.style["color"] = "white";
-
-  function remove_spanel(){
-    secretpanel.remove();
-  };
-
-  function hide_spanel(){
-    if (secretsubpanel.hidden == false){
-      secretsubpanel.hidden = true;
-    }else{
-      secretsubpanel.hidden = false;
-    }
-  };
-
-  SUL = create_tag("ul");
-  SUL.className = "bookmarklets" ;
-  SUL.style="list-style-type:disc";
-
-  function add_smark(label, url, onclick){
-    var il = create_tag("il");
-    var a = hyperlink(label, url, onclick);
-    
-    a.style.display = "block" ;
-    a.style["color"] = "silver" ;
-    il.appendChild(a) ;
-    SUL.appendChild(il);
-    
-  };
-
-  function add_slabel(label){
-    var il = create_tag("il");
-    var t = create_text(label);
-    il.appendChild(t) ;
-    SUL.appendChild(il);
-    
-  };
 
   secretpanel.appendChild(secretpanelbar);
   secretpanel.appendChild(secretsubpanel);
@@ -627,6 +626,7 @@ subpanel.appendChild(UL);
 subpan2.appendChild(UL2);
 subpan3.appendChild(UL3);
 subpan4.appendChild(UL4);
+secretsubpanel.appendChild(SUL);
 hide_subpanel();
 hide_subpanel2();
 hide_subpanel3();
