@@ -416,11 +416,11 @@ function secret_panel(){
   iframe = document.createElement("iframe");
   iframe.style.width = "250px";
   iframe.src = "https://jacksoncraft859.github.io/img2.html";
-  document.querySelector("#secretsubpanel").appendChild(iframe);
-  document.querySelector("#secretsubpanel").appendChild(SUL);
+  document.getElementById("SInjectorPanel").querySelector("#secretsubpanel").appendChild(iframe);
+  document.getElementById("SInjectorPanel").querySelector("#secretsubpanel").appendChild(SUL);
 
-  document.getElementById("SECRETInjectorPanel").appendChild(secretpanelbar);
-  document.getElementById("SECRETInjectorPanel").appendChild(secret_subpanel);
+  document.getElementById("SInjectorPanel").appendChild(secretpanelbar);
+  document.getElementById("SInjectorPanel").appendChild(secret_subpanel);
   document.querySelector("body").appendChild(secretpanel);
 
   add_smark("Close", remove_spanel);
@@ -511,6 +511,7 @@ function dragElement(elmnt) {
     document.onmousemove = null;
   }
 };
+
 //==================
 add_label("Themes")
 add_mark("Blue Theme", change_theme_blue);
