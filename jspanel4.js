@@ -395,8 +395,8 @@ function secret_panel(){
   secretpanel = create_tag("div");
   secretpanelbar = create_tag("div");
   secretpanelbar.innerHTML = "SECRET JS PANEL";
-  secretpanel.id = "SECRETInjectorPanel";
-  secretpanelbar.id = "SECRETInjectorPanel bar";
+  secretpanel.id = "SInjectorPanel";
+  secretpanelbar.id = "SInjectorPanel bar";
   secretpanelbar.style.height = "20px";
   secretpanelbar.style["background-color"] = "orange";
   secretpanelbar.style["z-index"] = 10e5;
@@ -410,7 +410,7 @@ function secret_panel(){
   secretpanel.style["background-color"] = "black";
   secretpanel.style["color"] = "white";
   
-  dragElement(document.querySelector("#SECRETInjectorPanel"));
+  dragElement(document.getElementById("SInjectorPanel"));
   function dragElement(elmnt) {
     var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
     if (document.getElementById(elmnt.id + "bar")) {
