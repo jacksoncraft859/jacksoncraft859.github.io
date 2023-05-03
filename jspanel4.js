@@ -425,7 +425,7 @@ function secret_panel(){
     } else {
     // otherwise, move the DIV from anywhere inside the DIV:
       elmnt.onmousedown = dragMouseDown;
-    }
+    };
 
     function dragMouseDown(e) {
     e = e || window.event;
@@ -436,7 +436,7 @@ function secret_panel(){
     document.onmouseup = closeDragElement;
     // call a function whenever the cursor moves:
     document.onmousemove = elementDrag;
-    }
+    };
 
     function elementDrag(e) {
     e = e || window.event;
@@ -455,10 +455,8 @@ function secret_panel(){
     // stop moving when mouse button is released:
     document.onmouseup = null;
     document.onmousemove = null;
-    }
+    };
   };
-
-
   add_smark("Close", remove_spanel);
   secretsubpanel.appendChild(SUL);
 };  
