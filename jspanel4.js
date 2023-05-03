@@ -414,6 +414,7 @@ function secret_panel(){
 
   secretpanel.appendChild(secretpanelbar);
   secretpanel.appendChild(secretsubpanel);
+  
   document.querySelector("body").appendChild(secretpanel);
   
   dragElement(document.getElementById("SECRETInjectorPanel"));
@@ -603,7 +604,7 @@ add_submark2("Execute HTML", "javascript:var txt='';function getSelText(wndw){va
 add_submark2("Show Cookies", ShowCookies);
 add_submark2("Remove Cookies", "javascript:void(document.cookie=null)");
 add_submark2("PwnYoutube", "javascript:(function(){url='http://deturl.com/download-video.js';document.body.appendChild(document.createElement('script')).src=url+'?'+new Date().getTime();})();");
-add_submark2("Full URLs", fullUrls)
+add_submark2("Full URLs", fullUrls);
 add_label("Multitools and OS's");
 add_mark("OS.JS", "javascript:var os = document.createElement('script');os.type='text/javascript';os.src='https://jacksoncraft859.github.io/os-js.js';document.body.appendChild(os);");
 add_mark("SilveOS", "javascript:var silve = document.createElement('script');silve.type='text/javascript';silve.src='https://jacksoncraft859.github.io/silveos.js';document.body.appendChild(silve);");
