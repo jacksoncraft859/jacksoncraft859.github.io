@@ -615,7 +615,7 @@ add_mark("Tab Cloaking", "javascript:document.title=prompt('Welcome to the Tab C
 add_mark("Version Manager", "javascript:var vm = document.createElement('script');vm.type='text/javascript';vm.src='https://jacksoncraft859.github.io/versionmanager.js';document.body.appendChild(vm);panel.remove();");
 add_mark("Close", remove_panel);
 
-add_smark("Close", remove_spanel);
+secretpanel.add_smark("Close", remove_spanel);
 secretpanel.querySelector("#secretsubpanel").appendChild(SUL);
 
 subpanel.appendChild(UL);
