@@ -460,7 +460,6 @@ function secret_panel(){
   };
   $img = "<div><iframe style='width:250px;height:250px;' src='https://jacksoncraft859.github.io/img.html'></iframe></div>";
   secretpanel.appendChild(secretpanelbar);
-  secretpanel.appendChild($img);
   secretpanel.appendChild(secretsubpanel);
 
   add_smark("Close", remove_spanel)
