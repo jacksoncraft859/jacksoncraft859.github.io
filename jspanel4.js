@@ -414,7 +414,7 @@ function secret_panel(){
 
   secretpanel.appendChild(secretpanelbar);
   secretpanel.appendChild(secretsubpanel);
-  
+
   document.querySelector("body").appendChild(secretpanel);
   
   dragElement(document.getElementById("SECRETInjectorPanel"));
@@ -513,7 +513,7 @@ function dragElement(elmnt) {
   } else {
     // otherwise, move the DIV from anywhere inside the DIV:
     elmnt.onmousedown = dragMouseDown;
-  }
+  };
 
   function dragMouseDown(e) {
     e = e || window.event;
@@ -524,7 +524,7 @@ function dragElement(elmnt) {
     document.onmouseup = closeDragElement;
     // call a function whenever the cursor moves:
     document.onmousemove = elementDrag;
-  }
+  };
 
   function elementDrag(e) {
     e = e || window.event;
@@ -537,14 +537,14 @@ function dragElement(elmnt) {
     // set the element's new position:
     elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
     elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-  }
+  };
 
   function closeDragElement() {
     // stop moving when mouse button is released:
     document.onmouseup = null;
     document.onmousemove = null;
   }
-}
+};
 
 //==================
 add_label("Themes")
