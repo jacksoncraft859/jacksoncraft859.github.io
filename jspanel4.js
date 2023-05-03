@@ -617,8 +617,8 @@ add_mark("Version Manager", "javascript:var vm = document.createElement('script'
 add_mark("Close", remove_panel);
 
 add_smark("Close", remove_spanel);
+  secretsubpanel.appendChild(SUL);
 
-secretsubpanel.appendChild(SUL);
 subpanel.appendChild(UL);
 subpan2.appendChild(UL2);
 subpan3.appendChild(UL3);
