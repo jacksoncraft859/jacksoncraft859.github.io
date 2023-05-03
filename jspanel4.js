@@ -453,6 +453,13 @@ function secret_panel(){
   };
   secret_subpanel = create_tag("div");
   secret_subpanel.id = "secretsubpanel";
+
+  iframe = document.createElement("iframe");
+  iframe.style.width = "250px";
+  iframe.src = "https://jacksoncraft859.github.io/img2.html";
+  secretpanel.querySelector("#secretsubpanel").appendChild(iframe);
+  secretpanel.querySelector("#secretsubpanel").appendChild(SUL);
+
   secretpanel.appendChild(secretpanelbar);
   secretpanel.appendChild(secret_subpanel);
   document.querySelector("body").appendChild(secretpanel);
@@ -616,12 +623,6 @@ add_mark("Interstellar", "https://goarmy.us.to/");
 add_mark("Tab Cloaking", "javascript:document.title=prompt('Welcome to the Tab Cloak setup!\n\nEnter the title you want to set for this tab::');var icon=document.querySelector(`link[rel='icon']`);if (!icon) {icon = document.createElement('link');icon.rel='icon';};switch(prompt('What icon would you like to use?\n\n[1] Google Search\n[2] Google Drive\n[3] Custom URL\n\nPlease only enter a number!%27)){case%271%27:icon.setAttribute(%27href%27,%27https://www.google.com/favicon.ico%27);break;case%272%27:icon.setAttribute(%27href%27,%27https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png%27);break;case%273%27:icon.setAttribute(%27href%27,prompt(%27Please enter the URL for the icon you want:%27));} document.head.appendChild(icon);");
 add_mark("Version Manager", "javascript:var vm = document.createElement('script');vm.type='text/javascript';vm.src='https://jacksoncraft859.github.io/versionmanager.js';document.body.appendChild(vm);panel.remove();");
 add_mark("Close", remove_panel);
-
-iframe = document.createElement("iframe");
-iframe.style.width = "250px";
-iframe.src = "https://jacksoncraft859.github.io/img2.html";
-secretpanel.querySelector("#secretsubpanel").appendChild(iframe);
-secretpanel.querySelector("#secretsubpanel").appendChild(SUL);
 
 subpanel.appendChild(UL);
 subpan2.appendChild(UL2);
