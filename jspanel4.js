@@ -462,7 +462,7 @@ function secret_panel(){
   secretpanel.appendChild(secretpanelbar);
   secretpanel.appendChild(secretsubpanel);
 
-  add_smark("Close", remove_spanel)
+  add_smark("Close", remove_spanel);
   secretsubpanel.appendChild(SUL);
 };  
   
