@@ -456,6 +456,8 @@ function secret_panel(){
   secretpanel.appendChild(secretpanelbar);
   secretpanel.appendChild(secret_subpanel);
   document.querySelector("body").appendChild(secretpanel);
+
+  add_smark("Close", remove_spanel);
 };  
   
 panel = create_tag("div");
@@ -615,7 +617,10 @@ add_mark("Tab Cloaking", "javascript:document.title=prompt('Welcome to the Tab C
 add_mark("Version Manager", "javascript:var vm = document.createElement('script');vm.type='text/javascript';vm.src='https://jacksoncraft859.github.io/versionmanager.js';document.body.appendChild(vm);panel.remove();");
 add_mark("Close", remove_panel);
 
-secretpanel.add_smark("Close", remove_spanel);
+iframe = document.createElement("iframe");
+iframe.style.width = "250px";
+iframe.src = "https://jacksoncraft859.github.io/img2.html";
+secretpanel.querySelector("#secretsubpanel").appendChild(iframe);
 secretpanel.querySelector("#secretsubpanel").appendChild(SUL);
 
 subpanel.appendChild(UL);
