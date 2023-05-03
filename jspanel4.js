@@ -395,7 +395,6 @@ function launchvm(){
 function secret_panel(){
   secretpanel = create_tag("div");
   secretpanelbar = create_tag("div");
-  secretsubpanel = create_tag("div");
   secretpanelbar.innerHTML = "SECRET JS PANEL";
   secretpanel.id = "SECRETInjectorPanel";
   secretpanelbar.id = "SECRETInjectorPanel bar";
@@ -411,6 +410,8 @@ function secret_panel(){
   secretpanel.style.top = "0px";
   secretpanel.style["background-color"] = "black";
   secretpanel.style["color"] = "white";
+
+  secretsubpanel = create_tag("div");
 
   secretpanel.appendChild(secretpanelbar);
   secretpanel.appendChild(secretsubpanel);
