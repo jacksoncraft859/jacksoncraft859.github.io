@@ -415,7 +415,7 @@ function secret_panel(){
 
   iframe = document.createElement("iframe");
   iframe.style.width = "250px";
-  iframe.src = "https://jacksoncraft859.github.io/img2.html";
+  iframe.src = "https://jacksoncraft859.github.io/img.html";
   secret_subpanel.appendChild(iframe);
   secret_subpanel.appendChild(SUL);
 
