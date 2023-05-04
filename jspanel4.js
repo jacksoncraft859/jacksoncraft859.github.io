@@ -419,8 +419,8 @@ function secret_panel(){
   secret_subpanel.appendChild(iframe);
   secret_subpanel.appendChild(SUL);
 
-  document.getElementById("SInjectorPanel").appendChild(secretpanelbar);
-  document.getElementById("SInjectorPanel").appendChild(secret_subpanel);
+  secretpanel.appendChild(secretpanelbar);
+  secretpanel.appendChild(secret_subpanel);
   document.querySelector("body").appendChild(secretpanel);
 
   add_smark("Close", remove_spanel);
