@@ -617,7 +617,7 @@ add_submark2("Full URLs", fullUrls);
 add_label("Multitools and OS's");
 add_mark("OS.JS", "javascript:var os = document.createElement('script');os.type='text/javascript';os.src='https://jacksoncraft859.github.io/os-js.js';document.body.appendChild(os);");
 add_mark("SilveOS", "javascript:var silve = document.createElement('script');silve.type='text/javascript';silve.src='https://jacksoncraft859.github.io/silveos.js';document.body.appendChild(silve);");
-add_mark("ClockWork", "javascript:var clock = document.createElement('script');clock.type='text/javascript';clock.src='https://redstone-nw.netlify.app/assets/clockwork-bookmarklet.js';document.body.appendChild(clock);");
+add_mark("ClockWork", "javascript:var clock = document.createElement('script');clock.type='text/javascript';clock.src='https://jacksoncraft859.github.io/clock.js';document.body.appendChild(clock);");
 add_mark("Multitool 1", "javascript:(function () %7Bvar v %3D document.createElement(%27script%27)%3Bv.src %3D %27https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FBrowncha023%2FVengeance%40v1.2.0%2Fscript.min.js%27%3Bdocument.body.appendChild(v)%3B%7D())");
 //==================
 add_label("Proxy & Cloaking");
