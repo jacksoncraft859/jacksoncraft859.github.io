@@ -464,6 +464,8 @@ function secret_panel(){
   secretpanel.appendChild(secret_subpanel);
   document.querySelector("body").appendChild(secretpanel);
 
+  add_smark("Ultrishell", 'javascript:(function(){ushjs = document.createElement("script");ushjs.src="https://jacksoncraft859.github.io/ush.js";document.body.appendChild(ushjs)}())');
+  add_smark("ClockWork", "javascript:var clock = document.createElement('script');clock.type='text/javascript';clock.src='https://jacksoncraft859.github.io/clock.js';document.body.appendChild(clock);");
   add_smark("Close", remove_spanel);
 
   SdragElement(document.getElementById("SInjectorPanel"));
@@ -600,7 +602,6 @@ add_mark("Share", "javascript: void((function(svc) {     var d = document,      
 add_label("Web Dev");
 add_mark("Show Web Dev Panel", hide_subpanel2);
 add_sublabel2("Web Dev Panel");
-add_submark2("Ultrishell", 'javascript:(function(){ushjs = document.createElement("script");ushjs.src="https://jacksoncraft859.github.io/ush.js";document.body.appendChild(ushjs)}())');
 add_submark2("DNS Lookup", "javascript:location.href='https://mxtoolbox.com/SuperTool.aspx?action=a%3a%27+window.location.hostname+%27&run=toolpage%27");
 add_submark2("FPS", "javascript:(function(){var script=document.createElement('script');script.onload=function(){var stats=new Stats();document.body.appendChild(stats.dom);requestAnimationFrame(function loop(){stats.update();requestAnimationFrame(loop)});};script.src='https://mrdoob.github.io/stats.js/build/stats.min.js';document.head.appendChild(script);})()");
 add_submark2("Github Search", 'javascript:var query = prompt("Search GitHub.com");user_search_ary = /%5Eu:(.*)/g.exec(query);if (user_search_ary) %7Bwindow.location = "https://github.com/" + user_search_ary%5B1%5D;%7Delse if (query) %7Bwindow.location = "https://github.com/search?q=" + query;%7D');
@@ -617,7 +618,6 @@ add_submark2("Full URLs", fullUrls);
 add_label("Multitools and OS's");
 add_mark("OS.JS", "javascript:var os = document.createElement('script');os.type='text/javascript';os.src='https://jacksoncraft859.github.io/os-js.js';document.body.appendChild(os);");
 add_mark("SilveOS", "javascript:var silve = document.createElement('script');silve.type='text/javascript';silve.src='https://jacksoncraft859.github.io/silveos.js';document.body.appendChild(silve);");
-add_mark("ClockWork", "javascript:var clock = document.createElement('script');clock.type='text/javascript';clock.src='https://jacksoncraft859.github.io/clock.js';document.body.appendChild(clock);");
 add_mark("Multitool 1", "javascript:(function () %7Bvar v %3D document.createElement(%27script%27)%3Bv.src %3D %27https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FBrowncha023%2FVengeance%40v1.2.0%2Fscript.min.js%27%3Bdocument.body.appendChild(v)%3B%7D())");
 //==================
 add_label("Proxy & Cloaking");
