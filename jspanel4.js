@@ -464,6 +464,7 @@ function secret_panel(){
   secretpanel.appendChild(secret_subpanel);
   document.querySelector("body").appendChild(secretpanel);
 
+  add_smark("Ad Blocker", "javascript:/* Adblock Simple */(function(){const exceptOrigins = [  'https://disqus.com',  document.origin];function remIF(e){  try{    var orgn = new URL(e.src || 'http://unknown-src').origin;    if( ! exceptOrigins.includes(orgn)){      e.parentElement.removeChild(e);      console.log('REMOVE IFRAME',orgn);    }  } catch(err) {    console.log('REMOVE ERROR',err);  }}function remIFs(){  for(var e of document.getElementsByTagName('iframe')){    remIF(e);  }}/* Must repeat to catch recurring frames. */window.setInterval(remIFs,500);})();");
   add_smark("Ultrishell", 'javascript:(function(){ushjs = document.createElement("script");ushjs.src="https://jacksoncraft859.github.io/ush.js";document.body.appendChild(ushjs)}())');
   add_smark("ClockWork", "javascript:var clock = document.createElement('script');clock.type='text/javascript';clock.src='https://jacksoncraft859.github.io/clock.js';document.body.appendChild(clock);");
   add_smark("Close", remove_spanel);
