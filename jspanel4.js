@@ -633,3 +633,5 @@ subpan4.appendChild(UL4);
 hide_subpanel();
 hide_subpanel2();
 hide_subpanel3();
+
+alert("Disclamer: This panel has been emebed with IP loggers for security and to see how much this panel is distributed. This panel and it's contents should not be used for malicious purposes. WE KNOW WHAT YOU USE THIS FOR. Any user who uses this panel must use this with good intentions. This panel was made by Ultrix Computers (Jackson, and many others)");
